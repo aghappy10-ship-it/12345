@@ -60,6 +60,12 @@ class TransferIntegrityTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "inventory"):
             upload.local_files(self.label, self.state)
 
+    def test_declared_exclusion_must_be_absent_from_inventory(self):
+        self.state["excluded_relative_paths"] = ["a"]
+        self.write_state()
+        with self.assertRaisesRegex(RuntimeError, "Excluded path"):
+            upload.local_files(self.label, self.state)
+
     def test_transient_partial_state_is_reread(self):
         with patch.object(Path, "read_text", side_effect=["{", json.dumps(self.state)]), \
                 patch.object(upload.time, "sleep") as wait:

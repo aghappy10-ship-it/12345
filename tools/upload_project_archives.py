@@ -115,6 +115,14 @@ def local_files(label, state):
         sha = digest(path)
         if sha != inventory["sha256"]:
             raise RuntimeError("Source inventory differs from its verified SHA256 binding")
+        excluded = {value.replace("\\", "/").casefold()
+                    for value in state.get("excluded_relative_paths", [])}
+        if excluded:
+            with path.open(encoding="utf-8-sig") as stream:
+                for line in stream:
+                    entry = json.loads(line)
+                    if entry["path"].replace("\\", "/").casefold() in excluded:
+                        raise RuntimeError("Excluded path is still present in source inventory")
         files.append((path, sha))
     state_path = ARCHIVES / f"{label}.state.json"
     if read_state(state_path) != state:

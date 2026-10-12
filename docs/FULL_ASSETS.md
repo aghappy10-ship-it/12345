@@ -19,7 +19,7 @@ GitHub官方限制每个Release文件小于2GiB、每个Release最多1000个附�
 | --- | ---: | ---: | --- |
 | 冻结主工程 `F:\Codex\2026-08-19\x2d2`，含 `.git` | 85,004 | 173,985,408,834 | `frozen-x2d2-complete` |
 | 冻结独立工作树 `F:\Codex\2026-08-19\x2d2-codex-independent` | 670,767 | 87,922,222,218 | `independent-worktree-complete` |
-| 活动工程 `F:\Codex\2026-08-19\x2d2-reference-restart`，归档开始时 | 157,218 | 2,790,050,354 | `active-reference-complete` |
+| 活动工程 `F:\Codex\2026-08-19\x2d2-reference-restart`，正确排除会话文件后 | 157,217 | 2,790,050,191 | `active-reference-complete` |
 | D盘历史交接 `D:\x2d` | 18,549，排除照片前 | 7,355,568,863，排除照片前 | `historical-handoff-complete` |
 | 用户提供的事实交接DOCX | 1 | 51,090 | `factual-handoff-document` |
 | I盘参考Windows安装器完整目录 | 73 | 11,868,412 | `reference-windows-installer` |
@@ -31,6 +31,8 @@ C盘 `C:\Users\1\Documents\Codex` 指向F盘，是同一物理工程，不重复
 原厂固件、镜像、完整解包系统树、反编译/Ghidra数据、脚本、原始研究日志、失败原件、上游依赖、重复副本与未完成临时pack均在对应原工程中保留，不再因为“可重生成”而略过。
 
 活动工程最终计量与前后清单以该根state为准。原先全量电脑检查已真实终止且生成最终失败回执后，才开始活动工程归档。
+
+活动工程的第一轮归档调用误用了不同方向的路径分隔符，目录清单没有排除163字节的会话文件。发现后停止该归档，失败原件仅留在本地；没有上传这一组。改为Windows路径重新归档，并追加“声明排除项不得出现在目录清单”的永久传输回归检查。上表是改正后的计量，不复用错误尝试。
 
 ## 明确排除
 
