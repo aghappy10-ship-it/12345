@@ -1,5 +1,6 @@
 """Publish this one private research archive after all eight roots are verified."""
 from datetime import datetime, timezone
+import argparse
 import json
 from pathlib import Path
 import subprocess
@@ -109,6 +110,21 @@ def checkpoint(result, stage):
     temporary.replace(FINAL_RESULT)
 
 
+def wait_for_upload():
+    last_count = None
+    while True:
+        record = transfer.read_state(transfer.RESULT)
+        count = len(record.get("roots", {}))
+        if count != last_count:
+            print(json.dumps({"verified_roots": count, "required_roots": len(transfer.LABELS)}), flush=True)
+            last_count = count
+        if record.get("state") == "ALL_ASSETS_UPLOADED_DRAFT_AWAITING_FINAL_INDEX":
+            return
+        if record.get("state") not in {"WAITING_FOR_ARCHIVES", "UPLOADING"}:
+            raise RuntimeError("Upload did not complete; keep the Release draft")
+        transfer.time.sleep(10)
+
+
 def main():
     if FINAL_RESULT.exists():
         raise FileExistsError("Read the existing finalization record before any restart")
@@ -185,4 +201,8 @@ def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--wait-for-upload", action="store_true")
+    if parser.parse_args().wait_for_upload:
+        wait_for_upload()
     main()

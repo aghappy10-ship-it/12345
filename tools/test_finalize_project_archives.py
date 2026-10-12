@@ -1,5 +1,6 @@
 """Final index/remote verification boundaries, without publishing or networking."""
 import unittest
+from unittest.mock import patch
 
 import finalize_project_archives as finalize
 
@@ -27,6 +28,21 @@ class FinalIndexTests(unittest.TestCase):
 
     def test_matching_final_set_is_accepted(self):
         finalize.verify_assets({"assets": [self.asset]}, [self.row], exact=True)
+
+    def test_wait_only_proceeds_after_terminal_transfer_state(self):
+        states = [{"state": "UPLOADING", "roots": {}},
+                  {"state": "ALL_ASSETS_UPLOADED_DRAFT_AWAITING_FINAL_INDEX", "roots": {}}]
+        with patch.object(finalize.transfer, "read_state", side_effect=states), \
+                patch.object(finalize.transfer.time, "sleep") as wait:
+            finalize.wait_for_upload()
+        wait.assert_called_once_with(10)
+
+    def test_wait_aborts_on_failed_transfer(self):
+        with patch.object(finalize.transfer, "read_state", return_value={"state": "FAILED_NOT_COMPLETE"}), \
+                patch.object(finalize.transfer.time, "sleep") as wait, \
+                self.assertRaisesRegex(RuntimeError, "keep the Release draft"):
+            finalize.wait_for_upload()
+        wait.assert_not_called()
 
     def test_wrong_remote_length_hash_and_state_are_rejected(self):
         for field, value in (("size", 9), ("digest", "sha256:wrong"), ("state", "starter")):
