@@ -144,6 +144,11 @@ def main():
         remote = json.loads(transfer.gh("api", f"repos/{transfer.REPO}/git/ref/heads/main"))
         if remote["object"]["sha"] != commit:
             raise RuntimeError("Final index commit is not the remote main commit")
+        tag = f"refs/tags/{transfer.TAG}"
+        existing = git("-c", "http.proxy=http://127.0.0.1:7890", "ls-remote", "origin", tag, tag + "^{}")
+        tag_rows = dict(line.split("\t")[::-1] for line in existing.splitlines())
+        if tag_rows and tag_rows.get(tag + "^{}", tag_rows.get(tag)) != commit:
+            raise RuntimeError("Existing asset tag points elsewhere; do not replace it")
         index_rows = []
         for path in paths:
             checkpoint(result, "UPLOADING_" + path.name)
@@ -155,7 +160,7 @@ def main():
         verify_assets(release, expected, exact=True)
         checkpoint(result, "PUBLISHING_VERIFIED_PRIVATE_RELEASE")
         transfer.gh("api", "-X", "PATCH", f"repos/{transfer.REPO}/releases/{transfer.RELEASE_ID}",
-                    "-F", "draft=false")
+                    "-f", "target_commitish=" + commit, "-F", "draft=false")
         checkpoint(result, "VERIFYING_PUBLISHED_PRIVATE_RELEASE")
         repository = json.loads(transfer.gh("api", "repos/" + transfer.REPO))
         release = json.loads(transfer.gh("api", f"repos/{transfer.REPO}/releases/{transfer.RELEASE_ID}"))
@@ -163,6 +168,11 @@ def main():
                 release.get("tag_name") != transfer.TAG:
             raise RuntimeError("Private published Release identity differs")
         verify_assets(release, expected, exact=True)
+        tag_ref = json.loads(transfer.gh("api", f"repos/{transfer.REPO}/git/ref/tags/{transfer.TAG}"))["object"]
+        if tag_ref["type"] == "tag":
+            tag_ref = json.loads(transfer.gh("api", f"repos/{transfer.REPO}/git/tags/{tag_ref['sha']}"))["object"]
+        if tag_ref.get("type") != "commit" or tag_ref.get("sha") != commit:
+            raise RuntimeError("Published asset tag is not bound to the final index commit")
         result.update(complete=True, state="ALL_EXISTING_PROJECT_ASSETS_PUBLISHED_VERIFIED",
                       commit=commit, release_url=release["html_url"], roots=len(index["roots"]),
                       verified_attachments=len(expected), missing_historical_attachments=MISSING)
