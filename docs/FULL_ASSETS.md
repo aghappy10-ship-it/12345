@@ -19,15 +19,18 @@ GitHub官方限制每个Release文件小于2GiB、每个Release最多1000个附�
 | --- | ---: | ---: | --- |
 | 冻结主工程 `F:\Codex\2026-08-19\x2d2`，含 `.git` | 85,004 | 173,985,408,834 | `frozen-x2d2-complete` |
 | 冻结独立工作树 `F:\Codex\2026-08-19\x2d2-codex-independent` | 670,767 | 87,922,222,218 | `independent-worktree-complete` |
-| 活动工程 `F:\Codex\2026-08-19\x2d2-reference-restart` | 动态，归档时记录 | 动态，归档时记录 | `active-reference-complete` |
+| 活动工程 `F:\Codex\2026-08-19\x2d2-reference-restart`，归档开始时 | 157,218 | 2,790,050,354 | `active-reference-complete` |
 | D盘历史交接 `D:\x2d` | 18,549，排除照片前 | 7,355,568,863，排除照片前 | `historical-handoff-complete` |
 | 用户提供的事实交接DOCX | 1 | 51,090 | `factual-handoff-document` |
 | I盘参考Windows安装器完整目录 | 73 | 11,868,412 | `reference-windows-installer` |
 | E盘参考扩展工具包完整目录 | 209 | 35,011,686 | `reference-extension-toolkit` |
+| 当前仍存在的用户参考截图 | 1 | 102,982 | `user-reference-screenshot` |
 
 C盘 `C:\Users\1\Documents\Codex` 指向F盘，是同一物理工程，不重复归档。冻结独立工程的 `.git` 文件指向主工程 `.git/worktrees`，所以这两棵树必须一起保留，不能只传独立树的89字节指针。
 
 原厂固件、镜像、完整解包系统树、反编译/Ghidra数据、脚本、原始研究日志、失败原件、上游依赖、重复副本与未完成临时pack均在对应原工程中保留，不再因为“可重生成”而略过。
+
+活动工程最终计量与前后清单以该根state为准。原先全量电脑检查已真实终止且生成最终失败回执后，才开始活动工程归档。
 
 ## 明确排除
 
@@ -36,6 +39,15 @@ C盘 `C:\Users\1\Documents\Codex` 指向F盘，是同一物理工程，不重复
 - GitHub上传认证存在系统凭据存储中，不加入工程资产。
 
 Qt、PyCryptodome等上游测试材料中的公开测试证书/测试密钥不是用户账号凭据，不因文件后缀为PEM/KEY而丢弃。上游许可与原始来源保持随工程保存。研究身份回读里名为 `credentials.txt` 的文件不能仅凭名字就删掉或认定包含登录密码。
+
+## 历史附件缺失
+
+下面两张早期临时截图已不在原临时位置，不能宣称已上传，也不能通过截图描述伪造原文件：
+
+- `codex-clipboard-c94219be-718a-4e2d-83a2-05cd34bfa551.jpg`
+- `codex-clipboard-627868ea-be65-41cc-a830-def525175e96.jpg`
+
+现存的 `codex-clipboard-8498b8e0-9413-43ed-b913-fd99ef42ca1a.jpg` 已单独归档。它是用户提供的本地模型监控界面参考，不是本项目或本机实测性能证明。
 
 ## 目录链接
 
