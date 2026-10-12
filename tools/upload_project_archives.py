@@ -54,6 +54,18 @@ def publish_record(record):
     temporary.replace(RESULT)
 
 
+def read_state(path):
+    # The existing archive writer saves in place. Retry only a bounded read
+    # collision/partial JSON; a valid FAILED state must reach main immediately.
+    for attempt in range(10):
+        try:
+            return json.loads(path.read_text(encoding="utf-8-sig"))
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            if attempt == 9:
+                raise
+            time.sleep(0.2)
+
+
 def local_files(label, state):
     if state.get("state") != "VERIFIED_LOCAL_NOT_UPLOADED":
         raise RuntimeError("Unverified archive state")
@@ -82,6 +94,12 @@ def local_files(label, state):
     actual_count = int(counts[-1]) if counts else 1
     if actual_count != expected_count:
         raise RuntimeError("Archive's tested file count differs from source inventory")
+    volume_names = [volume["name"] for volume in state["volumes"]]
+    disk_names = sorted(path.name for path in ARCHIVES.glob(f"{label}.7z.*"))
+    test_volumes = re.findall(r"^Volumes = (\d+)\s*$", test_log, re.MULTILINE)
+    if not volume_names or disk_names != volume_names or len(test_volumes) != 1 or \
+            int(test_volumes[0]) != len(volume_names):
+        raise RuntimeError("Archive volume sets/count differ between state, disk and integrity test")
     files = []
     for number, volume in enumerate(state["volumes"], 1):
         if volume["name"] != f"{label}.7z.{number:03d}":
@@ -92,9 +110,16 @@ def local_files(label, state):
         files.append((path, volume["sha256"]))
     if not files:
         raise RuntimeError("No archive volumes")
-    for suffix in ("state.json", "source-before.ndjson", "source-after.ndjson"):
+    for suffix, inventory in (("source-before.ndjson", before), ("source-after.ndjson", after)):
         path = ARCHIVES / f"{label}.{suffix}"
-        files.append((path, digest(path)))
+        sha = digest(path)
+        if sha != inventory["sha256"]:
+            raise RuntimeError("Source inventory differs from its verified SHA256 binding")
+        files.append((path, sha))
+    state_path = ARCHIVES / f"{label}.state.json"
+    if read_state(state_path) != state:
+        raise RuntimeError("Verified archive state changed before transfer")
+    files.append((state_path, digest(state_path)))
     return files
 
 
@@ -114,7 +139,7 @@ def main():
                 path = ARCHIVES / f"{label}.state.json"
                 if not path.exists():
                     continue
-                state = json.loads(path.read_text(encoding="utf-8-sig"))
+                state = read_state(path)
                 if state.get("state") == "FAILED_LOCAL_NOT_UPLOADED":
                     raise RuntimeError(f"Archive failed: {label}: {state.get('error')}")
                 if state.get("state") != "VERIFIED_LOCAL_NOT_UPLOADED":
