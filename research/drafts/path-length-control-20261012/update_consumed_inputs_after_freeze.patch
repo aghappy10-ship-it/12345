@@ -1,0 +1,23 @@
+*** Begin Patch
+*** Update File: tools/release_identity.py
+@@
+-                "build/peer-route-review-20261007-host-model/launch_admin_audit_once.py")
++                "build/peer-route-review-20261007-host-model/launch_admin_audit_once.py",
++                "build/peer-route-review-20261011-host-fixed/run_audit.py",
++                "build/peer-route-review-20261011-host-fixed/launch_admin_audit_once.py",
++                "build/peer-route-review-20261012-short-root/run_audit.py")
+*** Update File: tests/test_current_audit_lifetime.py
+@@
+         "build/peer-route-review-20261007-host-model/launch_admin_audit_once.py",
++        "build/peer-route-review-20261011-host-fixed/run_audit.py",
++        "build/peer-route-review-20261011-host-fixed/launch_admin_audit_once.py",
++        "build/peer-route-review-20261012-short-root/run_audit.py",
+     )
+@@
+     "build/peer-route-review-20261007-host-model/launch_admin_audit_once.py",
+-), ids=("runner", "launcher"))
++    "build/peer-route-review-20261011-host-fixed/run_audit.py",
++    "build/peer-route-review-20261011-host-fixed/launch_admin_audit_once.py",
++    "build/peer-route-review-20261012-short-root/run_audit.py",
++), ids=("runner", "launcher", "actual-host-fixed-runner", "actual-host-fixed-launcher", "successor-short-root-runner"))
+*** End Patch

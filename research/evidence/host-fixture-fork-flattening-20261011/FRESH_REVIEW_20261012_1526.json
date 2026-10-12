@@ -1,0 +1,48 @@
+{
+  "schema": "x2dii-stage-review-v1",
+  "reviewed_utc": "2026-10-12T07:26:06Z",
+  "next_review_due_utc": "2026-10-12T09:26:06Z",
+  "previous_review": "FRESH_REVIEW_20261012_1413.json",
+  "scope": "Stock lower layers; independent original-menu entry/page/back, boot loading and withdrawal only",
+  "source_inputs": {"count": 230, "sha256": "655e219d41b6c6dd4b6f994ab3a89ed76cf41e0d09d4191d37fe53ba4fec79b5", "fresh_readback_exit_code": 0},
+  "registry": {"count": 547, "sha256": "bd164c267b563d710047d734d735d47c8dfef358f5b3f0cdf37293527df0d656", "unchanged": true},
+  "active_audit": {
+    "directory": "build/peer-route-review-20261011-host-fixed",
+    "status": "RUNNING_NOT_FINAL",
+    "failure_records_at_readback": 14,
+    "latest_reported_percentage": 44,
+    "final_audit_exists": false,
+    "launcher_final_exists": false,
+    "source_edits_frozen": true,
+    "restarted_or_terminated_this_turn": false,
+    "single_monitor_session": 56918,
+    "runner_sha256": "3d45dafca02e42499ef0322c3e23ca750f407824e2ca0f1c1d45c49e6930fb19",
+    "launcher_sha256": "1b3242656b6c5691e10b4d31e8933ac60cdf2132130c6494ec68ea81c6df1cb8"
+  },
+  "assumptions_and_evidence": {
+    "install160": "Native original diagnosis remains NOT_RUN. Static success path has202 mapped native hashes of1234-byte synthetic core files; this is a cost hypothesis, not observed original failure execution or proof of root cause. Repeated write-boundary freshness and separate disk/proc identity endpoints remain preserved.",
+    "failure_boundaries": "All14 original FAILs remain. Cases12-14 stopped before injection at the160-second preparation boundary; their unexecuted safety assertions are not passing recovery results. No budget was extended.",
+    "availability": "Root independently executed all38 pure controls against receipt59c31985 and installbee27b39; unknown proc/self and stat results remain refused. Independent reviewer found no additional sampler defect. Actual mapped native predicates and fixed old-actor sample are still NOT_RUN.",
+    "native_helper": "Independent review found source execution before SHA pinning and an unbound second load. Two actual pure-entry REDs reproduced these, then corrected helper81f6488a reused one verified raw byte sequence and two non-main namespaces. Fresh root combination preserved38 controls plus2 new cases,40 PASS/0fail/0error/0skip; this is not native or release evidence.",
+    "historical_integrity": "Previous source versions, failed controls, incomplete native records and original audit artifacts remain intact. RG548 current metadata distinguishes old36/38 controls and current40 combination. Old116da96b NOT_RUN record remains historical; corrected81f6488a has a separate NOT_RUN binding.",
+    "production_recovery": "Read-only call-chain review did not find an observed proc-availability defect bypassing production recovery barriers. No speculative recovery restriction or formal device-code change was made.",
+    "identity_and_short_root": "Previously reviewed exact consumed-input and short Windows basetemp corrections remain unapplied until the original frozen audit/source evidence boundary is closed. No old partial control is claimed as a new original-node PASS."
+  },
+  "candidate_path_impact": {
+    "ui_backend_persistence": "No candidate UI, backend or persistence changes this turn; runtime validation still required.",
+    "packaging_rollback": "No package generated, no installation authority acquired; official recovery and historical requirements preserved.",
+    "capture_sensor_or_af_changes": false
+  },
+  "remaining_safe_local_work": [
+    "Finish current eight-goal append draft rebinding and pure projection without modifying frozen formal inputs",
+    "Continue the already active complete audit; classify any newly emitted failure against its actual boundary",
+    "After natural complete audit admission, execute mapped fake-proc semantic control and exact old-actor sample, then original diagnostics with unchanged budgets and assertions",
+    "Apply evidence-backed fixes after freeze, rerun original failed cases, then all applicable release checks before any requested installation"
+  ],
+  "camera_accesses": 0,
+  "camera_writes": 0,
+  "old_project_writes": 0,
+  "installable": false,
+  "package_created": false,
+  "counts_as_release_pass": false
+}

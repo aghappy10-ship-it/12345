@@ -1,0 +1,21 @@
+{
+  "status": "NOT_RUN",
+  "scope": "corrected native fixture-semantic control; native execution remains deferred during active full audit",
+  "script": "run_proc_availability_semantics_once.py",
+  "script_sha256": "81f6488a0bc8e2108a2e27cb8c443bf71d9e81abfa2145c30c6eacdcc9ea9c45",
+  "shared_sha256": "59c31985f48fab2723cacc5c6f3996c6aa36d2e48a0fb5f9abd4ecae1eddecbf",
+  "source_binding_controls": {
+    "file": "test_native_control_source_binding.py",
+    "sha256": "9ee20c1ccae96a9e3b6be10e4de3e6ade5704738dcb1d0babcabde514a468020",
+    "red": "native-source-binding-red2-20261012.xml",
+    "green": "native-source-binding-green-20261012.xml",
+    "combined_green": "draft-admission-root-green40-20261012.xml",
+    "combined_green_sha256": "4806071542d3b81796881e1e1e3c2050791effffbbaf49067d1528bb60f2fd43",
+    "execution_scope": "pure_entry_and_boundary_controls_only"
+  },
+  "supersedes_binding_only": "native-proc-availability-NOT_RUN-20261012.json; preserved pre-correction script116da96b record",
+  "requires": "existing exact audit natural-completion checks; original actor sampler explicitly not executed by this native semantic control",
+  "cases": ["all-absent", "root-missing", "self-stat-missing", "pid-directory-stat-missing", "pid-directory-symlink"],
+  "installable": false,
+  "limits": "Forty pure controls do not validate native shell semantics, actual completed-audit admission, actual original actor stop or any camera behavior."
+}

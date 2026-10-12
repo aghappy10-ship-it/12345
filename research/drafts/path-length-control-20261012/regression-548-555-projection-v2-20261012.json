@@ -1,0 +1,126 @@
+{
+  "status": "UNAPPLIED_APPEND_PROJECTION_VALID_NOT_FORMAL_GREEN",
+  "script_sha256": "a7da45b42111f81af5a5957fc08ab8fa788200b9444426816fcb705e4177aa35",
+  "patch_sha256": "0fe7667bc75c0201cfb42822480e8ab9519ac817cc47bb2224a8ff7dae37efae",
+  "projected_generator_sha256": "016ca58d32f4f4b8a743463a67e97e6f2d52047c35a838e5c673bc6b03ad9a44",
+  "pinned_inputs": {
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\build\\install160-original-diagnostic-20261012\\PENDING_REGRESSION_GOAL.json": "a62b4547d7a7cca3c67c13d645b05c6da51e01e253aa08566fe076587539ebf3",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\build\\path-length-control-20261012\\PENDING_REGRESSION_GOAL.json": "a998505475fd1f2ec59b6008dac353cdaff46b288bc291d47b41c450b60d47f8",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\build\\receipt360-original-diagnostic-20261012\\PENDING_REGRESSION_GOAL.json": "05bf4db44a0a17113056d3cceda8c154f6a6dc6032c7e9a9e745fb5d4c3c10ef",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\build\\receipt360-original-diagnostic-20261012\\PENDING_DISCONNECTED_REGRESSION_GOAL.json": "5abf0329444b1a16aebc6994f465a2407e5af7da3a5d3958e03d691a14c1720d",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\build\\path-length-control-20261012\\PENDING_DEPENDENCY_REGRESSION_GOAL.json": "bfba7226459e267269d90f2acd25e3df72d08962c2cd85c7d2278fe94fd462d2",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\build\\receipt360-original-diagnostic-20261012\\PENDING_REPLACEMENT_REGRESSION_GOAL.json": "c3d5950c50f01a45f02bcdad101a361e5e5399106315ca6fef0481f08ec72435",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\build\\receipt360-original-diagnostic-20261012\\PENDING_OFFER_REGRESSION_GOAL.json": "3619228fed06e62486f46bd85f0c70d5e3f08a91772c3db39e510a47adf75568",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\build\\receipt360-original-diagnostic-20261012\\PENDING_GUARDIAN_PREINJECTION_REGRESSION_GOAL.json": "8d5e8ce5a0ef3db3060f84eafede5baf76abb0bf94a4caa0ea8112f7b2d18f38",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\tools\\regression_manifest.py": "d2c69c974927b818fc7ccae920ff28bc4d6013e50c5be1f02a3b3dccb3447c90",
+    "F:\\Codex\\2026-08-19\\x2d2-reference-restart\\work\\reverse\\X2DII_REGRESSION_GATES.json": "bd164c267b563d710047d734d735d47c8dfef358f5b3f0cdf37293527df0d656",
+    "F:\\Codex\\2026-08-19\\x2d2\\work\\reverse\\X2DII_REGRESSION_GATES.json": "5c27dd68d29c95102a0bc58fbd95d78a089c70dc8097317b232158837b66ec1f"
+  },
+  "pending_goals_sha256": {
+    "X2D-RG-548": "e2acc8bbfe7e8332e21de838a8882cecd2649c71de598c1a7ec8390d3f0e9ddb",
+    "X2D-RG-549": "efd417965cd055f4b260a803f861fbc0ddc867f9350fac21f21e7bda1d5a7756",
+    "X2D-RG-550": "1c660d90117e00ed0b11168a4c78fbf3212eabb73714c8f7bc457e68a42cea50",
+    "X2D-RG-551": "e7c2e7ff27f9ac1ce304af3a5a9dce9491cd0d3ef8502c995f61fdd0abb7e4d0",
+    "X2D-RG-552": "42f4d7382a4bac00a90336ee41222f7ad4c4db2a9b05626f65ac3f103619f183",
+    "X2D-RG-553": "d43351333ebb198f317729379f5d70abf053ca6007f64f6c5e64ed55bb0e5d65",
+    "X2D-RG-554": "f4bf39d535472b97622c085a75b511410e399a545ab0eeb52686adf7e6c49d13",
+    "X2D-RG-555": "95a31f102779e595d470c8311cb43915cc1324b927c077565eb275eb1acc0245"
+  },
+  "prior_goal_count": 547,
+  "projected_goal_count": 555,
+  "prior_goals_preserved_exactly": true,
+  "complete_prior_seed_preserved_exactly": true,
+  "accepted_review_history_and_effective_rows_preserved_exactly": true,
+  "only_review_aggregate_hashes_recomputed": [
+    "effective_rows_sha256",
+    "input_goals_sha256",
+    "input_seed_sha256"
+  ],
+  "new_seed_rows": {
+    "X2D-RG-548": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Explicit first-edition menu product requirement.",
+      "goal_sha256": "e2acc8bbfe7e8332e21de838a8882cecd2649c71de598c1a7ec8390d3f0e9ddb",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-549": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Explicit first-edition menu product requirement.",
+      "goal_sha256": "efd417965cd055f4b260a803f861fbc0ddc867f9350fac21f21e7bda1d5a7756",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-550": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Explicit first-edition menu product requirement.",
+      "goal_sha256": "1c660d90117e00ed0b11168a4c78fbf3212eabb73714c8f7bc457e68a42cea50",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-551": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Explicit first-edition menu product requirement.",
+      "goal_sha256": "e7c2e7ff27f9ac1ce304af3a5a9dce9491cd0d3ef8502c995f61fdd0abb7e4d0",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-552": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Explicit first-edition menu product requirement.",
+      "goal_sha256": "42f4d7382a4bac00a90336ee41222f7ad4c4db2a9b05626f65ac3f103619f183",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-553": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Explicit first-edition menu product requirement.",
+      "goal_sha256": "d43351333ebb198f317729379f5d70abf053ca6007f64f6c5e64ed55bb0e5d65",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-554": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Explicit first-edition menu product requirement.",
+      "goal_sha256": "f4bf39d535472b97622c085a75b511410e399a545ab0eeb52686adf7e6c49d13",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-555": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Explicit first-edition menu product requirement.",
+      "goal_sha256": "95a31f102779e595d470c8311cb43915cc1324b927c077565eb275eb1acc0245",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    }
+  },
+  "policy_and_qualification_unchanged": true,
+  "formal_input_count": 230,
+  "formal_input_sha256": "655e219d41b6c6dd4b6f994ab3a89ed76cf41e0d09d4191d37fe53ba4fec79b5",
+  "existing_build_and_validate_api_used": true,
+  "inventory_valid": true,
+  "qualified": false,
+  "installable": false,
+  "formal_patch_applied": false,
+  "formal_registry_written": false,
+  "complete_suite_executed": false,
+  "native_execution": false,
+  "camera_accesses": 0,
+  "limits": "Only an independent in-memory append was validated. Formal generator/registry and all547 goals remain frozen. New555-source formal GREEN and complete JSON update remain required after freeze."
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.969" timestamp="2026-10-12T15:29:03.316459+08:00" hostname="DESKTOP-BRID5Q2"><testcase classname="build.path-length-control-20261012.test_append_refusal_priority_v2" name="test_refusal_entry_preserves_exact_original_exception[publisher-collision]" time="0.028"><properties><property name="scope" value="actual guarded publisher collision; projection run boundary substituted" /><property name="source_sha256" value="48431ea01d2952fcfb0a0c4eb1ec60584ebea0f8cf47c94e6e8d532d1301eda5" /><property name="variant" value="old" /><property name="existing_refusal_preserved" value="True" /><property name="retained_marker" value="F:\Codex\2026-08-19\x2d2-reference-restart\build\path-length-control-20261012\refusal-s6q9950y\refusal.json" /><property name="observed_error_type" value="ValueError" /></properties><failure message="AssertionError: refusal publication replaced the exact original error&#10;assert ValueError('output already exists') is Primary('original fixed-input refusal')">note_failure = False
+record_property = &lt;function record_property.&lt;locals&gt;.append_property at 0x000001F9DA717BA0&gt;
+
+    @pytest.mark.parametrize("note_failure", (False, True), ids=("publisher-collision", "publisher-and-note-failure"))
+    def test_refusal_entry_preserves_exact_original_exception(note_failure, record_property):
+        source = SOURCES[VARIANT]
+        raw = source.read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == EXPECTED_SHA
+        namespace = {"__name__": "_refusal_priority_control", "__file__": str(source)}
+        exec(compile(raw, str(source), "exec"), namespace)
+        scratch = Path(tempfile.mkdtemp(prefix="refusal-", dir=HERE))
+        namespace["guard_output"](scratch)
+        refusal = scratch / "refusal.json"
+        sentinel = b"KEEP_EXISTING_REFUSAL\n"
+        with refusal.open("xb") as output:
+            assert output.write(sentinel) == len(sentinel)
+        before = refusal.stat()
+    
+        class Primary(ValueError):
+            def add_note(self, value):
+                if note_failure:
+                    raise OSError("injected note failure")
+                return super().add_note(value)
+    
+        primary = Primary("original fixed-input refusal")
+    
+        def refused_run():
+            raise primary
+    
+        namespace.update(run=refused_run, REFUSAL=refusal, PATCH=scratch / "absent.patch")
+        tree = ast.parse(raw, filename=str(source))
+        entries = [node for node in tree.body if isinstance(node, ast.If)
+                   and ast.unparse(node.test) == "__name__ == '__main__'"]
+        assert len(entries) == 1
+        body = ast.Module(body=entries[0].body, type_ignores=[])
+        observed = None
+        try:
+            exec(compile(body, str(source), "exec"), namespace)
+        except BaseException as error:
+            observed = error
+        after = refusal.stat()
+        preserved = refusal.read_bytes() == sentinel and (before.st_dev, before.st_ino) == (after.st_dev, after.st_ino)
+        record_property("scope", "actual guarded publisher collision; projection run boundary substituted")
+        record_property("source_sha256", EXPECTED_SHA)
+        record_property("variant", VARIANT)
+        record_property("existing_refusal_preserved", str(preserved))
+        record_property("retained_marker", str(refusal))
+        record_property("observed_error_type", type(observed).__name__)
+        assert preserved
+        assert source.read_bytes() == raw
+&gt;       assert observed is primary, "refusal publication replaced the exact original error"
+E       AssertionError: refusal publication replaced the exact original error
+E       assert ValueError('output already exists') is Primary('original fixed-input refusal')
+
+build\path-length-control-20261012\test_append_refusal_priority_v2.py:73: AssertionError</failure></testcase><testcase classname="build.path-length-control-20261012.test_append_refusal_priority_v2" name="test_refusal_entry_preserves_exact_original_exception[publisher-and-note-failure]" time="0.008"><properties><property name="scope" value="actual guarded publisher collision; projection run boundary substituted" /><property name="source_sha256" value="48431ea01d2952fcfb0a0c4eb1ec60584ebea0f8cf47c94e6e8d532d1301eda5" /><property name="variant" value="old" /><property name="existing_refusal_preserved" value="True" /><property name="retained_marker" value="F:\Codex\2026-08-19\x2d2-reference-restart\build\path-length-control-20261012\refusal-x2a2sohh\refusal.json" /><property name="observed_error_type" value="ValueError" /></properties><failure message="AssertionError: refusal publication replaced the exact original error&#10;assert ValueError('output already exists') is Primary('original fixed-input refusal')">note_failure = True
+record_property = &lt;function record_property.&lt;locals&gt;.append_property at 0x000001F9DAC598A0&gt;
+
+    @pytest.mark.parametrize("note_failure", (False, True), ids=("publisher-collision", "publisher-and-note-failure"))
+    def test_refusal_entry_preserves_exact_original_exception(note_failure, record_property):
+        source = SOURCES[VARIANT]
+        raw = source.read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == EXPECTED_SHA
+        namespace = {"__name__": "_refusal_priority_control", "__file__": str(source)}
+        exec(compile(raw, str(source), "exec"), namespace)
+        scratch = Path(tempfile.mkdtemp(prefix="refusal-", dir=HERE))
+        namespace["guard_output"](scratch)
+        refusal = scratch / "refusal.json"
+        sentinel = b"KEEP_EXISTING_REFUSAL\n"
+        with refusal.open("xb") as output:
+            assert output.write(sentinel) == len(sentinel)
+        before = refusal.stat()
+    
+        class Primary(ValueError):
+            def add_note(self, value):
+                if note_failure:
+                    raise OSError("injected note failure")
+                return super().add_note(value)
+    
+        primary = Primary("original fixed-input refusal")
+    
+        def refused_run():
+            raise primary
+    
+        namespace.update(run=refused_run, REFUSAL=refusal, PATCH=scratch / "absent.patch")
+        tree = ast.parse(raw, filename=str(source))
+        entries = [node for node in tree.body if isinstance(node, ast.If)
+                   and ast.unparse(node.test) == "__name__ == '__main__'"]
+        assert len(entries) == 1
+        body = ast.Module(body=entries[0].body, type_ignores=[])
+        observed = None
+        try:
+            exec(compile(body, str(source), "exec"), namespace)
+        except BaseException as error:
+            observed = error
+        after = refusal.stat()
+        preserved = refusal.read_bytes() == sentinel and (before.st_dev, before.st_ino) == (after.st_dev, after.st_ino)
+        record_property("scope", "actual guarded publisher collision; projection run boundary substituted")
+        record_property("source_sha256", EXPECTED_SHA)
+        record_property("variant", VARIANT)
+        record_property("existing_refusal_preserved", str(preserved))
+        record_property("retained_marker", str(refusal))
+        record_property("observed_error_type", type(observed).__name__)
+        assert preserved
+        assert source.read_bytes() == raw
+&gt;       assert observed is primary, "refusal publication replaced the exact original error"
+E       AssertionError: refusal publication replaced the exact original error
+E       assert ValueError('output already exists') is Primary('original fixed-input refusal')
+
+build\path-length-control-20261012\test_append_refusal_priority_v2.py:73: AssertionError</failure></testcase></testsuite></testsuites>

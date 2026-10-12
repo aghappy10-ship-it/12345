@@ -1,0 +1,11 @@
+# X2D II reference restart
+
+- Current user task, updated 2026-10-03: follow the studied Hasselblad Feature Extensions approach through implementation of an X2D II candidate qualified for installation. The first agreed feature is an additional original-menu entry with an extension page, normal return, boot loading and removal. Continue local adaptation, builds, correction and testing autonomously. Necessary read-only live verification is in scope; final camera installation still requires user approval after qualification. Do not resume archival copying.
+- Do not edit the previous `x2d2` or `x2d2-codex-independent` trees. Preserve their failures, pending results, raw inputs and Git history.
+- Use this directory for new implementation and reference notes. Do not execute an upstream installer, device probe, autorun or deployment script wholesale. Review and adapt required operations for the exact X2D II baseline; keep ordinary local tests independent of hardware.
+- Pin public sources to an exact commit and keep current source separate from historical records. Distinguish publisher claims, observed source behavior, offline execution, and actual device evidence.
+- Earlier release rules and historical regression goals remain preserved. A future implementation must review every applicable historical goal; starting over does not waive failed or pending requirements.
+- Only an entirely qualified candidate may be presented for installation. Component builds, simulations and historical device records are not live qualification. Keep unresolved gates explicit and continue relevant local work until an actual external dependency remains.
+- The frozen historical regression registry at ../x2d2/work/reverse/X2DII_REGRESSION_GATES.json is an immutable source. Record inherited applicability and new findings in this project's work/reverse/X2DII_REGRESSION_GATES.json, bound to the original registry hash. Never silently drop or weaken inherited goals.
+- This stage does not claim higher burst rates or AF performance. Do not add active capture/topology changes to this menu-integration candidate.
+- Keep updates short. Do not ask permission for ordinary local reads or analysis already requested by the user.

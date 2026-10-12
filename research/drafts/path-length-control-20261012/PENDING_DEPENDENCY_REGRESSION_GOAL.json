@@ -1,0 +1,39 @@
+{
+  "status": "REAL_SOURCE_DEPENDENCY_RED_FORMAL_APPEND_PENDING_FROZEN_AUDIT_AND_ORIGINAL_REPLAY",
+  "expected_prior_goal_count": 547,
+  "expected_prior_registry_sha256": "bd164c267b563d710047d734d735d47c8dfef358f5b3f0cdf37293527df0d656",
+  "proposed_goal": {
+    "id": "X2D-RG-552",
+    "title": "Actual fixed and successor audit consumers participate in public build identity",
+    "origin": "The formal invocation test consumes20261011-host-fixed/run_audit.py and the output-exclusive test consumes its launcher, but neither is in release_identity.AUDIT_INPUTS. The reviewed short-root invocation patch would add another unlisted consumed runner. source_inputs does not recursively scan build. A runner's separate audit snapshot does not add these dependencies to public build_subject. Replaying the unchanged existing public identity test for all three paths produced three actual missing-input assertion failures in inputbind-red-20261012.xml.",
+    "required_behavior": "Preserve every prior AUDIT_INPUTS entry and append exactly the actual fixed runner, actual fixed launcher and newly consumed short-root runner. Extend the existing explicit membership and public build-identity parameter coverage without replacing its body or assertions. Each complete consumed source file must have its fresh exact hash and length in source_inputs; changing its read-boundary bytes must change build_subject, and restoring the observation must restore the subject without modifying the real file. Keep snapshot/run identity and public build identity distinct; do not use one to fill an omitted dependency in the other.",
+    "required_evidence": [
+      "Retain the current-source RED XML SHAe74398cac64126113d1e3f84a2124aa88a6b82db248aa2f422bfdf8fea2d3685 and caller source SHA9bbba3287c9311e86375dc4443af0ea77dbe60ee7c3b4ff31ca57160e86bb6f7. The existing test body was directly called; no audit, native shell or camera was executed.",
+      "Independently review the unapplied update_consumed_inputs_after_freeze.patch SHA076b96776eb450191204e4bbd608750fb5f21ffec5cb1a8632cabe0e52e15a5e and preserve every historical input and test parameter. Apply only after original230/655e diagnostics are complete or explicitly retained unresolved.",
+      "After actual formal application, rerun the existing membership test and all old/new public build identity cases; then rerun the actual invocation coverage and complete applicable candidate audit with fresh new input hashes. Drafts or the old failed audit cannot be used as a GREEN result for the applied source.",
+      "Append this APPLICABLE/NOT_RUN/false/empty-reference goal and seed after the frozen audit boundary, preserving all prior goals and pending548-551. No package, installation authority or actual menu/boot/withdrawal qualification is granted."
+    ]
+  },
+  "proposed_applicability": {"classification": "APPLICABLE", "evidence_status": "NOT_RUN", "counts_as_pass": false, "evidence_refs": []},
+  "projection_control_20261012": {
+    "status": "PROJECTED_INPUT_CONTROL_GREEN_NOT_FORMAL_GREEN",
+    "script": "project_consumed_audit_inputs.py",
+    "script_sha256": "93f1aafe16a4ab498c7535987754c3cb099f22272800094ebd7b6d792064de75",
+    "xml": "inputbind-projection-green-20261012.xml",
+    "xml_sha256": "41bc909c98ac3de0f93b6500987f243c248fac74d08daa23942d985a5e38c7f5",
+    "passed": 3,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "scope": "Independent in-memory projection of the exact AUDIT_INPUTS hunk; unchanged original public build identity test body and three-case caller",
+    "formal_source_count": 230,
+    "formal_source_sha256": "655e219d41b6c6dd4b6f994ab3a89ed76cf41e0d09d4191d37fe53ba4fec79b5",
+    "projected_source_count": 233,
+    "projected_source_sha256": "b8792f9e7031ef2eda30df1df71911d99c249b84a02349377e93354f573cb403",
+    "limits": "Root independently read the control implementation and freshly verified its source/XML bindings and unchanged formal input identity. Original13 entries and all230 prior records are retained; no native audit or camera execution. Formal application and fresh formal GREEN remain required."
+  },
+  "patch_applied": false,
+  "camera_accesses": 0,
+  "camera_writes": 0,
+  "installable": false
+}

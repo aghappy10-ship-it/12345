@@ -1,0 +1,21 @@
+{
+  "status": "ACTUAL_DISCONNECTED240_FAILURE_RETAINED_FORMAL_APPEND_PENDING_SOURCE_FREEZE",
+  "expected_prior_goal_count": 547,
+  "expected_prior_registry_sha256": "bd164c267b563d710047d734d735d47c8dfef358f5b3f0cdf37293527df0d656",
+  "proposed_goal": {
+    "id": "X2D-RG-551",
+    "title": "Disconnected-host final240 evidence distinguishes normal preparation, modeled timeout, recovery and final publication",
+    "origin": "failure-0006.json SHA4a12df4b3096fbc0c09404b83c267b7e262160c4600a46a9d4de8afe9bf8e170 records original test_disconnected_host_does_not_prevent_local_timeout_and_original_gui_recovery failing after its fixed240-second final-file wait, total244.3079seconds. The retained fixture-_jcupzl7 has loaded-event/validation-started markers, normal gate completion, modeled restored GUI and TEMPORARY_FAILED78, but no copied final. Post-failure sampler observed worker867 original birth804049568 stateR and controller1235/gateGUI5070 absent. This is not a camera disconnect/recovery test result.",
+    "required_behavior": "Preserve original disconnected240, launch8, no status read/stop command/ACK while detached, all original assertions, modeled clock rules, cleanup and production program bytes. Do not transfer the separately approved TERM-only preparation/recovery split to this case or expand waiting without its necessary authority. Distinguish the launch-to-final host observation interval from actual modeled fault-to-recovery/publication intervals; retained marker mtimes and non-atomic copied logs are not precise event timestamps or in-budget acceptance. Preserve final publication as a separate obligation even when the GUI model appears restored.",
+    "required_evidence": [
+      "Retain original failure and full copied fixture with exact source230/655e and program bindings. Record loaded-event/validation-started copied mtimes near04:55:55.7, modeled GUI running near04:56:01.6 and failure sampler04:56:07.29-.33UTC as limited evidence, not an atomic chronology or proof of camera timing.",
+      "Determine whether the normal setup prefix, modeled timeout, controller restoration or guardian final publication consumes the original interval using existing fixed hooks and unchanged original body. Do not infer permanent recovery failure or skip final checks because restored GUI text exists.",
+      "Any justified correction must rerun the exact original node under disconnected240 and all applicable historical gates on its new source from the beginning. Actual camera loading/return/capture/boot/recovery remain separately unverified."
+    ]
+  },
+  "proposed_applicability": {"classification": "APPLICABLE", "evidence_status": "NOT_RUN", "counts_as_pass": false, "evidence_refs": []},
+  "formal_append_condition": "After active full audit and original230/655e replay; preserve every existing goal/seed and append548/549/550/551 without repurposing prior results",
+  "camera_accesses": 0,
+  "camera_writes": 0,
+  "installable": false
+}

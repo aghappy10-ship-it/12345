@@ -1,0 +1,151 @@
+{
+  "snapshot_utc": "2026-10-12T09:10:57.5168833Z",
+  "audit_directory": "build/peer-route-review-20261011-host-fixed",
+  "final_audit_present": false,
+  "failure_count": 14,
+  "failures": [
+    {
+      "record": "failure-0001.json",
+      "nodeid": "tests/test_install_core_runtime.py::test_distinct_capture_owner_normal_install_activate_and_restore",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 161.84592780005187,
+      "recorded_utc": "2026-10-12T11:08:31.22951+08:00",
+      "sha256": "89dd9c0ca2903bf356102b3fb377a9011272d848ef30971dc7b3c5813b9acea7",
+      "qualification": false
+    },
+    {
+      "record": "failure-0002.json",
+      "nodeid": "tests/test_install_core_runtime.py::test_later_phase_core_drift_after_remount_blocks_configuration_write[capture_owner-restore-boot.sh]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 162.0565838998882,
+      "recorded_utc": "2026-10-12T11:28:52.910857+08:00",
+      "sha256": "c804ce548e405a2eb2cb5bc018e7d4af6e9c1565bb22113689d0c57e73ef77e1",
+      "qualification": false
+    },
+    {
+      "record": "failure-0003.json",
+      "nodeid": "tests/test_menu_auxiliary_staging.py::test_preparation_executes_exact_bytes_without_replacing_any_formal_content[workers]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 0.20797390001825988,
+      "recorded_utc": "2026-10-12T11:28:56.251018+08:00",
+      "sha256": "0daf9cc23a08279044cf897549f6fa6d168ffd8ef70898dcc36dac53ef02fc98",
+      "qualification": false
+    },
+    {
+      "record": "failure-0004.json",
+      "nodeid": "tests/test_menu_auxiliary_staging.py::test_preparation_executes_exact_bytes_without_replacing_any_formal_content[dependencies]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 0.1914116000989452,
+      "recorded_utc": "2026-10-12T11:28:56.495875+08:00",
+      "sha256": "77bc58c1352ff6c700d93844d27c497389bd2e376d159c1b6b9956acb2c512a6",
+      "qualification": false
+    },
+    {
+      "record": "failure-0005.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_fixed_sender_verifies_final_hash_and_does_not_invent_ui_success",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 367.37960290000774,
+      "recorded_utc": "2026-10-12T12:51:58.419696+08:00",
+      "sha256": "7b9beceff30c36c3c3b63b34c458d1bd1ff402afbd9ec59328de1509e4b0a0b7",
+      "qualification": false
+    },
+    {
+      "record": "failure-0006.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_disconnected_host_does_not_prevent_local_timeout_and_original_gui_recovery",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 244.3079167000251,
+      "recorded_utc": "2026-10-12T12:56:07.918022+08:00",
+      "sha256": "4a12df4b3096fbc0c09404b83c267b7e262160c4600a46a9d4de8afe9bf8e170",
+      "qualification": false
+    },
+    {
+      "record": "failure-0007.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_pending_replacement_is_retained_and_never_promoted_to_final[same]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 246.0725734999869,
+      "recorded_utc": "2026-10-12T13:23:37.66914+08:00",
+      "sha256": "124eed85bf6a66f57d2a036945c8a976df7936f06c302e0ebf33fccd9bf62023",
+      "qualification": false
+    },
+    {
+      "record": "failure-0008.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_pending_replacement_is_retained_and_never_promoted_to_final[changed_status]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 247.1509879999794,
+      "recorded_utc": "2026-10-12T13:27:44.903002+08:00",
+      "sha256": "d1ed8fdd171eb30a1db04becba93e0de93ee35c2397cc32365b19322f6ca1b01",
+      "qualification": false
+    },
+    {
+      "record": "failure-0009.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_partial_child_offer_is_not_observable_as_a_completed_transfer",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 166.56935790006537,
+      "recorded_utc": "2026-10-12T13:57:51.503041+08:00",
+      "sha256": "53fc665b02c3ea327e5a49a7755ecfd0e2dddf2fde8520c960d6ccaef5c16127",
+      "qualification": false
+    },
+    {
+      "record": "failure-0010.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_controller_loss_during_cancel_publication_preserves_writer_and_recovers_owned_child",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 166.22462939994875,
+      "recorded_utc": "2026-10-12T14:03:20.157303+08:00",
+      "sha256": "6acc9cb82d68e129db2f46a859ba85f3da2c374134c33a4b497312cf0a0c2861",
+      "qualification": false
+    },
+    {
+      "record": "failure-0011.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_controller_cancel_loss_before_child_recording_requires_no_admission_proof[spawned_unrecorded]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 166.3450814000098,
+      "recorded_utc": "2026-10-12T14:09:23.762457+08:00",
+      "sha256": "11f0fd5df64b0ecb51b4f800e466ee93be86d83a228060c21f5fe7c9bd09c786",
+      "qualification": false
+    },
+    {
+      "record": "failure-0012.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_unrecorded_live_or_unknown_child_refuses_recovery_without_signalling[still_live]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 165.66366369999014,
+      "recorded_utc": "2026-10-12T14:24:16.359295+08:00",
+      "sha256": "4d2b98732fa1384985ebe9d792eafeae5d83ebf9480370e716e54a90ea6bc8f8",
+      "qualification": false
+    },
+    {
+      "record": "failure-0013.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_unrecorded_live_or_unknown_child_refuses_recovery_without_signalling[unknown_stat]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 166.25504069996532,
+      "recorded_utc": "2026-10-12T14:27:02.765813+08:00",
+      "sha256": "b8e468dc8b085787f15943669dae1236f62b142cf207215eb6e5b85998a6fa7a",
+      "qualification": false
+    },
+    {
+      "record": "failure-0014.json",
+      "nodeid": "tests/test_menu_lifecycle_transport.py::test_unrecorded_live_or_unknown_child_refuses_recovery_without_signalling[reused_lifetime]",
+      "outcome": "failed",
+      "phase": "call",
+      "duration_seconds": 165.59833950002212,
+      "recorded_utc": "2026-10-12T14:29:48.490035+08:00",
+      "sha256": "b879883b82af5aeae75e9aa951e9c14a16eae1fc5159818ea9fb7709f24ffa3a",
+      "qualification": false
+    }
+  ],
+  "camera_accesses_this_publication": 0,
+  "tests_started_this_publication": 0,
+  "installable": false
+}

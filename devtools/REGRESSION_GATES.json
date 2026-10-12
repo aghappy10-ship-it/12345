@@ -1,0 +1,173 @@
+{
+  "scope": "developer-workbench-usb-system-code-device-bridge-and-observed-capture-timeline",
+  "canonical_registration": "PENDING_FROZEN_AUDIT",
+  "canonical_path": "work/reverse/X2DII_REGRESSION_GATES.json",
+  "canonical_base_sha256": "9635b6fb0ceec7aad2fe369fab6c62867fbb06abf4d057585319dd697e1d1ede",
+  "canonical_goal_count": 511,
+  "registration_note": "Preserve the registry currently bound by the running historical host-model audit. Append these defects through the existing NEW_GOALS/manifest workflow after the frozen audit ends. This ledger does not replace canonical registration or firmware release gates.",
+  "installable": false,
+  "goals": [
+    {
+      "id": "DEV-CAMERA-001",
+      "origin": "Windows enumerated six matching camera interfaces, but 24 serial CIM property calls exhausted the eight-second detector budget and repeated clicks returned unknown presence.",
+      "required_behavior": "One bounded fixed presence query must not call Get-PnpDeviceProperty. Optional OS metadata failures must retain observed camera presence, PnP problems and interface identities. Unknown enumeration remains distinct from complete absence.",
+      "required_evidence": ["Actual WindowsPowerShell query with isolated PnP substitutes", "Optional metadata failure regression", "Fresh repeated browser scans against the actual connected camera"]
+    },
+    {
+      "id": "DEV-CAMERA-002",
+      "origin": "A real multi-instance Get-PnpDeviceProperty batch returned 24 properties all stamped with the final interface ID; blindly batching would associate metadata with the wrong interface.",
+      "required_behavior": "Associate metadata only with a verified exact instance ID. Two cameras must remain separate; missing, mismatched or failed metadata cannot overwrite another node's identity or establish an inferred physical join.",
+      "required_evidence": ["Exact native node-ID check", "Metadata mismatch regression", "Two-body grouping regression", "Fresh live parent/interface association readback"]
+    },
+    {
+      "id": "DEV-CAMERA-003",
+      "origin": "The workbench displayed the complete encoded diagnostic command on timeout, obscuring the useful error; missing interface drivers were not distinguished in the display.",
+      "required_behavior": "Timeout display must be concise and exclude command payloads. Show missing drivers and partial metadata separately from USB presence. Never label USB discovery as an authenticated debug or camera protocol connection.",
+      "required_evidence": ["Concise timeout regression", "Actual cameraDescription JavaScript execution", "HTTP repeated-scan state publication", "Visible fresh browser result"]
+    },
+    {
+      "id": "DEV-CAMERA-004",
+      "origin": "Homepage lacked camera/capability status, and the workbench service badge could be confused with a camera connection. A successful USB snapshot cannot establish body code modification capability.",
+      "required_behavior": "Homepage separates the workbench connection, USB identification, Codex local-code modification and unavailable body read/deploy/load integration. Display the manual scan timestamp. Both scan buttons use one in-flight lock; failed or pending scans must not reuse a green presence claim.",
+      "required_evidence": ["Actual cameraOverview JavaScript state cases", "Actual dual scan-handler execution with token and error recovery", "HTTP homepage capability labels", "Visible fresh connected-camera homepage"]
+    },
+    {
+      "id": "DEV-SYSTEM-001",
+      "origin": "An empty section retained the preceding file and an outstanding old read could overwrite the newly selected section. Directory refresh had the same race.",
+      "required_behavior": "Invalidate old asynchronous reads on section changes and refresh. Empty sections clear file identity and disable editing. Directory refresh cannot discard or strand an editor's text.",
+      "required_evidence": ["Actual system.js delayed-read and empty-section execution", "Actual catalog-refresh navigation lock", "Visible section selection against real files"]
+    },
+    {
+      "id": "DEV-SYSTEM-002",
+      "origin": "Structured provenance rendered as object Object. The 48000-byte general request limit rejected legal 32000-byte code after JSON escaping.",
+      "required_behavior": "Render explicit human-readable provenance without claiming full source recovery. Accept the bounded JSON expansion only on the draft save interface; all other request limits stay unchanged.",
+      "required_evidence": ["Actual provenance rendering", "Real HTTP escaped-text boundary save", "Unchanged original hash and unrelated-body rejection"]
+    },
+    {
+      "id": "DEV-SYSTEM-003",
+      "origin": "A first save failure could leave base/revision files without record metadata and permanently block reading and retry.",
+      "required_behavior": "Publish the complete first draft generation atomically. Preserve failed uncommitted generations separately and allow safe retry; continue rejecting corrupt or missing metadata in published drafts.",
+      "required_evidence": ["First metadata commit failure and restart retry", "First directory publish failure and restart retry", "Published metadata corruption rejection"]
+    },
+    {
+      "id": "DEV-BRIDGE-001",
+      "origin": "Original adb_state ends in pidof, which exits 1 for the precisely observed stopped adbd/no-PID state; treating it as loss of the entire connection would misdiagnose stock behavior.",
+      "required_behavior": "Recognize only the exact known stopped/no-PID structure, retain its original nonzero status, and continue failing other nonzero or malformed queries.",
+      "required_evidence": ["Exact stock stopped format", "Malformed and other nonzero return rejection"]
+    },
+    {
+      "id": "DEV-BRIDGE-002",
+      "origin": "Finite close joins and daemon workers could release ownership or exit the interpreter during a qualified transaction. In-flight HTTP draft writes and idle HTTP keepalive needed explicit shutdown handling.",
+      "required_behavior": "Reject new admission during shutdown. Keep ownership until in-flight local writes and started device transactions terminate through their original recovery boundaries. Transaction and ownership watcher threads must not be killed by daemon shutdown; idle HTTP must be bounded.",
+      "required_evidence": ["Blocked original transaction close/on-idle test", "Non-daemon worker and watcher assertions", "HTTP save paused across shutdown", "Real idle HTTP keepalive shutdown"]
+    },
+    {
+      "id": "DEV-BRIDGE-003",
+      "origin": "Prepared route results contain raw bytes not suitable for SSE, and modified local drafts must not be attributed to a previously qualified binary.",
+      "required_behavior": "Retain raw payloads locally and expose metadata only. Bind prepared operations to their exact candidate and independent restore manifest. HTTP cannot supply commands, paths, approval, qualified context or an arbitrary execution provider. Boot activation does not imply actual GUI load.",
+      "required_evidence": ["Raw result evidence retention", "Forbidden HTTP arguments", "Default three write routes disabled", "Exact candidate hash and no automatic draft inclusion"]
+    },
+    {
+      "id": "DEV-TIMELINE-001",
+      "origin": "A real keyword-only CaptureTimeline differed from a permissive test double. Parser or thread-start failure could leave monitoring marked active even though no worker was running.",
+      "required_behavior": "Exercise the actual parser through the collector, clean up every failed admission/initialization, and preserve accurate inactive/failed state. USB enumeration and a working desktop visualization cannot stand in for a current device log sample.",
+      "required_evidence": ["Real parser normal append integration", "Parser initialization failure", "START evidence and thread-start failure cleanup", "Actual device read result or explicit failure"]
+    },
+    {
+      "id": "DEV-TIMELINE-002",
+      "origin": "EOF fragments could destroy tail overlap and replay an already observed shoot request. Baseline, repeated lines and graph/queue/preview logs can otherwise be mistaken for fresh completed photos.",
+      "required_behavior": "Process only complete log lines, preserve repeated occurrence counts, baseline old history, and surface missing overlap/rotation/truncation. Treat graph configuration, idle waits and AF/AE activity as observed logs, not capture or storage completion. FileIO success is a reported write, not readback verification.",
+      "required_evidence": ["Partial final-line completion without request replay", "Duplicate line multiplicity", "Baseline and gap fixtures", "Actual known shooter/FileIO/graph/queue log classification"]
+    },
+    {
+      "id": "DEV-TIMELINE-003",
+      "origin": "A capture-window filter using only event order could include another boot or a post-gap log source. Frequent samples also collapsed expanded raw-evidence details.",
+      "required_behavior": "Restrict each request window to its explicit boot and log-window identity, display every event's own source, never correlate merely by nearby time, and preserve expanded evidence across samples.",
+      "required_evidence": ["Actual JavaScript cross-boot and cross-window filter", "Real parser source identity fields", "Expanded details survive next sample"]
+    },
+    {
+      "id": "DEV-TIMELINE-004",
+      "origin": "Stopping during final evidence could reopen an inactive monitor as stopping forever. A final RESULT or latest-pointer failure also left the timeline substate stopped although the global task failed.",
+      "required_behavior": "Stop admission only for an active monitor. Synchronize every terminal evidence/publication failure to the timeline API and visible failure state while preserving previously observed records. Preserve any original RESULT and append a distinct finalization failure record when publication fails.",
+      "required_evidence": ["Stop during final persistence", "Final RESULT failure state regression", "Latest-pointer failure plus preserved result and failure record"]
+    },
+    {
+      "id": "DEV-WORKBENCH-001",
+      "origin": "New component tests passed with package-qualified module invocation but failed the actual workbench unittest discovery entrypoint because of relative-only imports.",
+      "required_behavior": "Every new component test must execute in the actual full-suite discovery workflow as well as its targeted invocation. Do not omit failed modules or skip real desktop preview to manufacture a complete result.",
+      "required_evidence": ["Full devtools discovery with actual desktop Qt opt-in", "Zero errors, failures and unexpected skips"]
+    },
+    {
+      "id": "DEV-TIMELINE-005",
+      "origin": "A cached imported parser could execute old code while the collector attributed current on-disk source hashes to it.",
+      "required_behavior": "Compile the same inspected parser bytes whose hash is recorded, recheck that source each poll, and label bridge on-disk hash scope explicitly. Restart the workbench for final executable verification; never call an arbitrary disk hash loaded-code attestation.",
+      "required_evidence": ["Cached-module shadow rejected", "Parser source change during poll", "Fresh final-source service restart", "Explicit hash scope"]
+    },
+    {
+      "id": "DEV-PREVIEW-001",
+      "origin": "The real Qt browser stream returned HTTP400 with Permission denied for frame.png during publication, although actual menu entry, return, rendering and clean teardown worked. The old diagnostic conflated non-200 with truncated PNG.",
+      "required_behavior": "Serve validated complete PNG bytes from one opened file snapshot, not a checked path reopened later. Retry only bounded known transient Windows read conflicts; malformed PNG, excessive size and lasting denial remain failures. Preserve concrete HTTP status/body diagnostics and clean owned-process teardown.",
+      "required_evidence": ["Observed HTTP400 access-error reproduction", "Transient reader conflict fixture", "Permanent error and invalid CRC/end rejection", "Real Qt concurrent HTTP stream with zero read errors", "Full applicable workbench suite"]
+    },
+    {
+      "id": "DEV-PREVIEW-002",
+      "origin": "A CRC-valid PNG envelope with invalid compressed IDAT was accepted and returned HTTP200 despite being undecodable.",
+      "required_behavior": "Validate the actual pinned Qt RGB/A non-interlaced layout, bounded compressed-stream completion, exact scanline bytes and legal filters. Reject unsupported critical chunks, duplicate headers and non-contiguous data. Never inflate without a size bound or hide semantic corruption behind transient IO retries.",
+      "required_evidence": ["CRC-valid malformed IDAT fails before fix", "Malformed zlib, row length, filters and header fixtures", "Real Qt concurrent stream and full discovery with zero failures"]
+    },
+    {
+      "id": "DEV-TIMELINE-006",
+      "origin": "Actual camera sampling succeeded but the visible monitor reason remained starting indefinitely.",
+      "required_behavior": "After a successful parsed sample, replace the startup reason with an accurate receiving state while preserving failure, stop, gap and scope distinctions. A requested stop must retain its stopping reason when an in-flight sample returns.",
+      "required_evidence": ["First-sample reason fixture fails before fix", "Sample publication status regression", "In-flight stop reason regression fails before fix and passes after", "Fresh restarted browser with real samples"]
+    },
+    {
+      "id": "DEV-TIMELINE-007",
+      "origin": "Initial 30-minute/16-MiB budget was too short for the user's real observation sessions. Increasing it without changes would retain thousands of query previews in RAM.",
+      "required_behavior": "Provide the increased 8-hour/2-GiB session budget and show actual budget use. Monitoring keeps only monotonic query counts in memory, never reuses evidence filenames, and still preserves original raw files, terminal evidence, stopping and capacity/time-limit behavior. Stop at low actual disk space without deleting older records; retain existing terminal capacity reserve, and do not guarantee persistence during external disk exhaustion. Reset elapsed time per session and freeze terminal snapshots. Do not claim an eight-hour hardware soak from clock fixtures or short live reads.",
+      "required_evidence": ["Old 30-minute and 16-MiB boundaries no longer stop", "New time/capacity boundary and terminal evidence fixtures", "30000-query no-preview-retention and unique filename regression", "Low-disk clean stop with preserved START and RESULT", "Per-session elapsed reset and terminal freeze including last-query stop/error duration", "Actual timeline budget rendering", "Full applicable suite and fresh current live session"]
+    },
+    {
+      "id": "DEV-TIMELINE-008",
+      "origin": "Real 20261008 session 09f452f4a4584f66a88983513ad2394b grew 17-20KiB between approximately 2-second samples, peaking at 206752 bytes; a 16KiB moving-tail window lost overlap. Increasing only total session quota did not fix per-query displacement. First range validation dd517d0ee9d343cead6a79d7d46b6342 failed because the stat child had no /proc/self/fd/3; bind /proc/$$/fd/3 of the shell that opened the descriptor instead of assuming child inheritance.",
+      "required_behavior": "Production collector uses backend-owned byte-offset ranges with opened-file identity, boot/size bounds, exact raw-byte decoding and bounded full-line assembly. Drain backlog without a one-second delay per chunk; honor stop/time/capacity/source gates per range. Baseline old EOF fragments only, not new rows appended during initial range. Preserve repeated identical occurrences and Unicode across packets. Surface rotation/truncation/anchor changes; malformed or denied reads never advance the cursor. Recovery checks both metadata boundaries and records each already confirmed discontinuity only once. Use canonical Base64 instead of verbose hex: live hex session a4c551c4a6674c05af01503029cb1ffc timed out while backlog grew; do not weaken native record/completion validation or merely increase timeout to hide throughput failures. A bounded head can legitimately terminate tail; acceptance must bind exact range length, fd identity, canonical decoding and full native completion. Display backlog; do not hide old gaps or claim unrestricted lossless tracing.",
+      "required_evidence": ["Pre-fix 202KiB displacement regression failure", "High-density multi-range drain with all requests counted and zero synthetic gaps", "Unicode and half-line assembly", "EOF baseline boundary and repeated rows", "Strict native command-slot bound", "Rotation/truncation/anchor and short/invalid range fixtures", "Stop and budgets while draining", "Actual JavaScript backlog rendering", "Full applicable workbench discovery and fresh real camera range evidence"]
+    },
+    {
+      "id": "DEV-TIMELINE-009",
+      "origin": "The 20261008 range monitor stopped on an incomplete native result. Restarting made a new EOF baseline and skipped accumulated bytes; wrapped connect errors with empty receive diagnostics could also evade reconnect classification.",
+      "required_behavior": "Within one running process and session, retry only explicit transport interruptions for at most120 seconds while preserving committed cursor, anchor, parser and pending row. Retain every failed attempt, recheck identity and sources, enforce original stop/time/capacity bounds. Empty receive diagnostics may use a concrete network cause; malformed/native-terminal/duplicate-completion/permission/local-disk failures remain fatal. Do not claim disk-checkpoint recovery or resume old sessions.",
+      "required_evidence": ["Direct reset and actual QueryFailure-wrapped connect failure resume", "Half-row completed after reconnect without replay", "Duplicate completion timeout remains protocol failure", "Reconnect exhaustion and stop cancellation", "Source change and local evidence failure do not retry", "Fresh current-source live reads with explicit reconnect evidence scope"]
+    },
+    {
+      "id": "DEV-TIMELINE-010",
+      "origin": "Real session3f3f5a5d3f2f44c9a4056be451c86ecd rotated inode123 to19 at roughly33MiB. The old recovery discarded the start of the new source, and showed unknown backlog as zero.",
+      "required_behavior": "Confirmed new source/truncation starts at zero with an empty parser baseline, so its first complete requests are observed. Discard old pending fragments, persist old-source known unread interval and keep uncertainty about unobserved growth/archives. Same-inode anchor changes cannot replay old data as fresh requests; reset that unknown source at EOF with an explicit gap. Rebuilding cursor/backlog stays unknown, never a false caught-up state; source-change evidence survives failure and stop.",
+      "required_evidence": ["Three requests at new file beginning", "Old unfinished row not merged into new source", "Established anchor rewrite without old-request replay", "Gap retains old known unread interval and unknown backlog", "Source metadata both boundaries and single confirmed gap", "Actual UI unknown/rebuilding/gap display"]
+    },
+    {
+      "id": "DEV-TIMELINE-011",
+      "origin": "A completed row spanning several queries referenced only the final packet, which did not contain its whole original log line.",
+      "required_behavior": "Every byte-range event carries all contiguous raw evidence spans covering its complete row, including its terminator. Preserve pending provenance across retries and reset it across gaps. Bound row and span count; rejected bytes cannot commit an event/cursor or lose skip-line state. Tail fixtures without exact byte positions cannot invent ranges.",
+      "required_evidence": ["Three-block exact ranges", "UTF-8 split and half-line completion", "Retry and source-change provenance", "Invalid UTF-8 atomic rejection and bounded pending evidence", "Actual event-detail multiple evidence references"]
+    },
+    {
+      "id": "DEV-TIMELINE-012",
+      "origin": "The200-row live deque silently removed historical events from user navigation and made previously observed components look unobserved. Parser deltas also discarded events over200 in a single range.",
+      "required_behavior": "Journal all bounded input deltas, not only the live deque. Publish complete durable immutable segments before updating committed history count. Provide bounded authenticated current-session history pages with strict filename/header/id/order/session checks and guarded file reads. Preserve session cumulative and per-source counts separately; distinguish stored total, live200-row view, page scope and incomplete capture windows. Ignore old async responses across sessions or return to live. History failure cannot fake an empty successful page or trigger device retry.",
+      "required_evidence": ["600 events in one chunk to persisted journal to real HTTP3-page roundtrip", "No omissions/duplicates and history pagination during append", "Real JS cumulative eviction/history/error/races", "Malformed params and missing token", "Corruption, deletion, link/reparse, oversize and replacement rejection", "Journal write failure with unchanged committed history count", "Complete current workbench suite and visible real history browse"]
+    },
+    {
+      "id": "DEV-TIMELINE-013",
+      "origin": "The real browser history button returned403 even though parser, mocked-UI and explicit-header HTTP tests passed. The shipped common api(path) sent session token only forPOST, not the new authenticated historyGET.",
+      "required_behavior": "Exercise the actual shipped shared request adapter. Fixed same-origin historyGET must carry the current session token; unrelated GET behavior and authenticated JSONPOST must stay intact. Reject foreign destinations before fetch so extending GET authorization cannot leak credentials. Never weaken server token/host/origin checks to make a button pass. Missing/expired token shows a concrete recoverable error, not a successful empty page.",
+      "required_evidence": ["Actual app.js request function pre-fix failure", "Authenticated historyGET and unchanged JSONPOST", "External/ambiguous destination refused before fetch", "Real browser history load, older page and returnlive with camera-origin events", "Full applicable suite on final sources"]
+    },
+    {
+      "id": "DEV-TIMELINE-014",
+      "origin": "An independently reviewed legal65520-byte chunk of2520 short usb records expanded beyond the2MiB individual evidence file limit after event provenance was added.",
+      "required_behavior": "Keep the individual raw evidence limit unchanged. Split all event deltas into bounded immutable journal segments with independent monotonically increasing segment IDs and segment-matched capture references. Partial write/rename failure preserves the durable prefix and rejects retry; temporary files are not committed records. Parsed total and stored total remain distinct in terminal API and diagnostic RESULT summary; the summary is not a resumable checkpoint.",
+      "required_evidence": ["Pre-fix dense legal chunk fails on evidence size", "2520 short rows with long path persist through bounded segments and history pages", "600 request rows split with matching captures", "Second-segment write and rename failure with readable1..200 prefix", "No device retry after local persistence failure", "Full applicable suite plus independent review"]
+    }
+  ]
+}

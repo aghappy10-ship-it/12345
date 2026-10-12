@@ -1,0 +1,26 @@
+{
+  "status": "ACTUAL_FAILURE_RETAINED_FORMAL_APPEND_PENDING_FROZEN_AUDIT",
+  "expected_prior_goal_count": 547,
+  "expected_prior_registry_sha256": "bd164c267b563d710047d734d735d47c8dfef358f5b3f0cdf37293527df0d656",
+  "proposed_goal": {
+    "id": "X2D-RG-554",
+    "title": "Offer injection readiness timeout is not successful partial-transfer protection",
+    "origin": "failure-0009.json in the active complete audit failed test_partial_child_offer_is_not_observable_as_a_completed_transfer while waiting160seconds for offer-write-held. Launch returned0; total166.56935790006537seconds. Raw failure SHA25653fc665b02c3ea327e5a49a7755ecfd0e2dddf2fde8520c960d6ccaef5c16127 is preserved. The held injection was not positively observed; all subsequent reader, release, final and GUI recovery checks were not reached.",
+    "required_behavior": "Keep the original160-second readiness budget and unchanged hook, release and assertion order. Separately prove fault-injection entry, partial offer invisibility, child admission, final receipt and GUI restoration. A fixture copy or later process sample cannot replace exact deadline evidence or establish a completed handshake. Do not reuse an earlier119-second observation as this candidate result or apply unrelated timeout approvals.",
+    "required_evidence": [
+      "Retain failure-0009.json and fixture-c9maw92a. The non-atomic copied fixture contains stop.intent, stop.armed and matching gui.request; GUI model is stopped and core model running. No held marker, offer writer PID/stat, reader marker, child.offer.pending, public offer/admit or gate.log was retained. This supports an unreached injection sequence, not a specific instruction-level root cause.",
+      "The existing post-failure sample observes identity-matched worker1457/controller1825 inS; it is not the160-second terminal state. No absence of a copied file proves all descendants ended.",
+      "Keep reader waiting/partial-offer assertions, release action,90-second final wait, NOT_FEATURE_VALIDATED receipt, GUI restoration, offer/admit equality, pending removal and TERM-before-GUI-start assertions explicitly NOT_RUN until genuinely executed.",
+      "After source-bound diagnosis and correction, rerun the unchanged original case then the complete applicable release checks with fresh identities. Desktop model results do not prove camera menu, capture/save, boot or withdrawal."
+    ]
+  },
+  "proposed_applicability": {
+    "classification": "APPLICABLE",
+    "evidence_status": "NOT_RUN",
+    "counts_as_pass": false,
+    "evidence_refs": []
+  },
+  "camera_accesses": 0,
+  "camera_writes": 0,
+  "installable": false
+}

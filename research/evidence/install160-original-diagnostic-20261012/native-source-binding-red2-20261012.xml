@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="1.025" timestamp="2026-10-12T15:20:54.720772+08:00" hostname="DESKTOP-BRID5Q2"><testcase classname="build.install160-original-diagnostic-20261012.test_native_control_source_binding" name="test_unbound_shared_definitions_are_rejected_before_execution" file="build\install160-original-diagnostic-20261012\test_native_control_source_binding.py" line="12" time="0.009"><failure message="RuntimeError: unchecked definitions executed">tmp_path = WindowsPath('F:/Codex/2026-08-19/x2d2-reference-restart/build/ns2612r2/test_unbound_shared_definition0')
+
+    def test_unbound_shared_definitions_are_rejected_before_execution(tmp_path):
+        context = runpy.run_path(str(CONTROL), run_name="_native_binding_control")["main"].__globals__
+        shared = tmp_path / "unbound-shared.py"
+        shared.write_bytes(b"raise RuntimeError('unchecked definitions executed')\n")
+        context["SHARED"] = shared
+        with pytest.raises(ValueError, match="shared source differs"):
+&gt;           context["main"]()
+
+build\install160-original-diagnostic-20261012\test_native_control_source_binding.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+build\install160-original-diagnostic-20261012\run_proc_availability_semantics_once.py:31: in main
+    context = runpy.run_path(str(SHARED), run_name="_native_proc_semantic_control")["main"].__globals__
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen runpy&gt;:291: in run_path
+    ???
+&lt;frozen runpy&gt;:98: in _run_module_code
+    ???
+&lt;frozen runpy&gt;:88: in _run_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   raise RuntimeError('unchecked definitions executed')
+E   RuntimeError: unchecked definitions executed
+
+build\ns2612r2\test_unbound_shared_definition0\unbound-shared.py:1: RuntimeError</failure></testcase><testcase classname="build.install160-original-diagnostic-20261012.test_native_control_source_binding" name="test_shared_replacement_between_loads_cannot_execute_new_definitions" file="build\install160-original-diagnostic-20261012\test_native_control_source_binding.py" line="21" time="0.017"><failure message="RuntimeError: replacement definitions executed">tmp_path = WindowsPath('F:/Codex/2026-08-19/x2d2-reference-restart/build/ns2612r2/test_shared_replacement_betwee0')
+
+    def test_shared_replacement_between_loads_cannot_execute_new_definitions(tmp_path):
+        context = runpy.run_path(str(CONTROL), run_name="_native_binding_control")["main"].__globals__
+        shared = tmp_path / "bound-shared.py"
+        original = b'''import hashlib
+    from pathlib import Path
+    def digest(raw):
+        return hashlib.sha256(raw).hexdigest()
+    def checked_bytes(path):
+        return Path(path).read_bytes()
+    def load_reviewed_runner():
+        return {}
+    def require_completed_audit(runner):
+        Path(__file__).write_bytes(b"raise RuntimeError('replacement definitions executed')\\n")
+        return {}, None, None, b'{}'
+    def require_original_actor_stop(failure):
+        raise ValueError('original bound definitions retained')
+    def main():
+        pass
+    '''
+        shared.write_bytes(original)
+        context.update(SHARED=shared, SHARED_SHA=hashlib.sha256(original).hexdigest(),
+                       RESULT=tmp_path / "result.json")
+        with pytest.raises(ValueError, match="original bound definitions retained"):
+&gt;           context["main"]()
+
+build\install160-original-diagnostic-20261012\test_native_control_source_binding.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+build\install160-original-diagnostic-20261012\run_proc_availability_semantics_once.py:41: in main
+    context = runpy.run_path(str(SHARED), run_name="_capture_remap_only")["main"].__globals__
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen runpy&gt;:291: in run_path
+    ???
+&lt;frozen runpy&gt;:98: in _run_module_code
+    ???
+&lt;frozen runpy&gt;:88: in _run_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   raise RuntimeError('replacement definitions executed')
+E   RuntimeError: replacement definitions executed
+
+build\ns2612r2\test_shared_replacement_betwee0\bound-shared.py:1: RuntimeError</failure></testcase></testsuite></testsuites>

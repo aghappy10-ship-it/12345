@@ -1,0 +1,650 @@
+{
+  "schema": "x2dii-accepted-inherited-applicability-review-v1",
+  "status": "CLASSIFICATION_ONLY_NOT_RELEASE_EVIDENCE",
+  "review_date": "2026-10-04",
+  "inherited_count": 352,
+  "inherited_seed_sha256": "e728edc4afa1437005b7fb4ed1124337f3d9b12a67217e7728ddc2456353e974",
+  "inherited_goals_sha256": "7eee9391c8033baf8df4dd4a91d5ad713ece5b75bec1c2d257ba4f5561bada11",
+  "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+  "preserved_seed_rows": {
+    "X2D-RG-001": {
+      "applicability": "OUT_OF_SCOPE",
+      "scope_reason": "No 3/6/9 fps selector or continuous-rate feature is added; the original capture entry and semantics must instead be preserved under X2D-RG-355.",
+      "goal_sha256": "b471b7fd271cdf6e084f5db40565b1acdf043e791b7e2d18d9b5717d3db82c66",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-004": {
+      "applicability": "OUT_OF_SCOPE",
+      "scope_reason": "This candidate adds no burst preset, shutter command, electronic-shutter override or native leaf-shutter extension. Stock capture preservation remains required under X2D-RG-355.",
+      "goal_sha256": "df2abd63b64589317202ca6757f5a4bbeb4ead4dcb1b347bc45c42e5af482d94",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-005": {
+      "applicability": "OUT_OF_SCOPE",
+      "scope_reason": "No bit-depth or sensor-mode option is exposed or modified. This scope exclusion is not sensor or capture qualification.",
+      "goal_sha256": "7ccd65bf4fc8aaf10449030ef56e13504bc056bea79093598a0859abc96c30f2",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-009": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "This implementation extends the original compiled-QML menu, so stock UI visibility and exact target Qt/unit/header identity remain required.",
+      "goal_sha256": "03bdfb13658ecea51b1e79764cf88cd1437ee8c3c852f56b2c3ee113c97dd8a9",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-010": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "472186605b03fe5267e66c48d9decf1adf04425f1129b7fad9388d4ee2e55a99",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-011": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "ec47c3c1af8bbfdfb432d74a5a671323250f0be89da5bfb5ac495b94639223bf",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-016": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "eccf8d095d1c3b2a0baa87d49d4267f2dd2cc97c16617d1f21319360d58244dc",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-017": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "6c7b2990491734e0a8dd4118884d0f5a4d6f2b4f6ab001c837df008747e888ee",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-018": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "0bffbd29bfac81b3451aa77173ed4526c87ea7c9e26b8438dc9c9646583898fd",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-019": {
+      "applicability": "OUT_OF_SCOPE",
+      "scope_reason": "No 3/6/9 fps capability is enabled or claimed. No physical cadence result has been obtained for this candidate.",
+      "goal_sha256": "71643a19f7bb4def07df04205cab53eef725f0d687703c9e017211287f6baa75",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-020": {
+      "applicability": "OUT_OF_SCOPE",
+      "scope_reason": "No high-rate leaf-shutter request or lens-capability negotiation is implemented. Unchanged stock capture paths still require proof.",
+      "goal_sha256": "282bfe7bfc00d912769c5bcdd2fd436da5eaa3bc9774636191d8e32f12b28d3e",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-021": {
+      "applicability": "OUT_OF_SCOPE",
+      "scope_reason": "The extension does not set FastCaptureAllowed or a SlowBurst debug option and claims no first-shot or cadence improvement.",
+      "goal_sha256": "9827eb761f685e839b9959b421799ca69df7088f8f9dbfca705d6861ddb25e98",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-022": {
+      "applicability": "OUT_OF_SCOPE",
+      "scope_reason": "No EXMCU exposure overlap or interframe rearm schedule is changed and no 6/9 fps claim is made.",
+      "goal_sha256": "a25bd21f4eae1f9447fa930106f88b05ed23324813d92912de6c8e36c7d0a393",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-023": {
+      "applicability": "OUT_OF_SCOPE",
+      "scope_reason": "No performance estimate, charge-during-readout optimization or continuous-shutter-charge change belongs to this menu-only requirement.",
+      "goal_sha256": "dbb15dc8f2735c8f24792a57f6da29e447de960cfdb253c73257f5e921d61112",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-024": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The native menu adapter must use proven target mappings, exact original bytes and platform ABI; source names, generic ABI assumptions and host compilation alone are insufficient.",
+      "goal_sha256": "4cd517f5b120c7db190c03c0206db9e4bcf20d4f6e4df34a64d82825876e3ab4",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-043": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The native menu adapter must use proven target mappings, exact original bytes and platform ABI; source names, generic ABI assumptions and host compilation alone are insufficient.",
+      "goal_sha256": "d7044c090f03d9af000109b78096c637fe7427c51b2e88608859f8c0753be168",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-044": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "bc548b19635b89f175e378c8d7aa35c9fb14aa57a7c2d80d6c02e945fa185962",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-053": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "37da27b8d32232ebc1ad3a5c6ff8e45e662a6dda0c25ff1a7983eb926e591683",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-061": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "a74522e3937b317dfbf21d5d8ec985c751a199d1799ea27c054743f3171ef7f0",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-078": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "be2239b7bf7c2996fc27834d560b8f07e3e6ff95c1446d735b1ad7ca74f8b4b0",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-081": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "d7cf7eec3d98fae60a3e274b23c6e110c3a5d62d392b329fd70366a67e49398d",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-089": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "c07ea80bd26fac6abd2cec62c49ea4ff87026c230f9a4401a3cc4bcffea12e3d",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-090": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "9142048b08b0e70efdff76a9dd9f0acc94138cbe297c4603d94e4720d88b2e45",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-091": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "e753b667021d57dec974d0a1149e8b71b59c9931054581ae0ef1e9b15d469fdb",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-099": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "16060b29036a5d972ee9a4f930b818f845b6cd68befd1cf792780c412ef0e835",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-100": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "0d666edda59fd5e7b5e78f424a89cd83c2a53a5dd03d81f4907dab8d7dec8b7b",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-112": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "cd6d10349568c82a70e2ec6fd22f33bb6ff4b6f512d8c46ecd400506aaae1e3e",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-114": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The native menu adapter must use proven target mappings, exact original bytes and platform ABI; source names, generic ABI assumptions and host compilation alone are insufficient.",
+      "goal_sha256": "63cb4d77cfd509f3dd2e290295ea0dfdc4c67105e5c902bb68d437d1c1e12f9a",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-116": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "29abd0f8f65347626bc9fd8050408877dafd113a9726b04ef568ee215017decc",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-120": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "ec798487b3636464880a53a6fb5db272bf5e558c5c608562ae266a773c6ccff8",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-121": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "640a6651b447dfdeef7a0486a71a3e705dccdb08169dd97fa889f0e558d9a8e8",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-128": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "9068079b6eca397e66ddf854951d66f1e2814c70cfc617dc92cc6d66ac53c173",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-131": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "ec6e7f1c1b57f488b0c1ebff5d1a3a0783c45891177940f6340e7a9f69e902a7",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-136": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "9e3118ef3198820af034fb5fc62b76e08002fd8e8a05c174c2c8815a3c897bd0",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-139": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "9ad74e430730b29bb137436a87671039ac98fbc67d1a72db44978fb1c4380f88",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-140": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "d46a9f6a691e1d86c96a0411399d39d8ed3c176717dc085643c1bb6d9a249810",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-141": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "a5dc326fb23d0675a17f9017936ac77f50d8288f0548de53dcb7b5913956d930",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-143": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "dd65aabab8007407926198ea7f7fbb55cd48924f5f956ee7b918e484f317ae14",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-149": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "2a6ba5122f66078a3e6a3a1efaa914243442f65ee1cdb5aa5e2bf4335b952efc",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-155": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "3ca159a27b03f2e8093d466763304441613b99a0ec16211f4a0fdfe85f14b0e6",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-157": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "eace614b858fcbad97528262fc320a6ee7aee52df42e0732fe172d2d43f6dc3b",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-160": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "1472add23dcb51dd1349275b16fb2a1648723fd26122e197e29db8e64853c60b",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-162": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "ef7e9ef8a94b670d771b8d9b39ac40c6fc5f08f66147e539d0e78c9177fd4ccf",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-197": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The native menu adapter must use proven target mappings, exact original bytes and platform ABI; source names, generic ABI assumptions and host compilation alone are insufficient.",
+      "goal_sha256": "d8a45bf0886caec33182af3d51be30cb3721cf21b28abbd30db696fe02828a1a",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-213": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "ce22d5141cabe6c5e1e5c5b453e1b443b0426179e1a4a82a40cf4e0ed9622761",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-225": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "This implementation extends the original compiled-QML menu, so stock UI visibility and exact target Qt/unit/header identity remain required.",
+      "goal_sha256": "e899dd3796a8ce5ebc80daeb78296f9db0b95d68855f4516b1434f1d7a60e55c",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-227": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "This implementation extends the original compiled-QML menu, so stock UI visibility and exact target Qt/unit/header identity remain required.",
+      "goal_sha256": "286e9af049da2d8820cfe11a205d90aac4c9f2ad330552514ae0fa1e2841cc58",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-232": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The native menu adapter must use proven target mappings, exact original bytes and platform ABI; source names, generic ABI assumptions and host compilation alone are insufficient.",
+      "goal_sha256": "dd6781eaa29855a323ddf431babedd428648fdef9ce5bf7cfc16f0c547283678",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-243": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "e988a58b73515f299e066099fe1f7b85c16f00c68f9ecdea44b1ae85a47d9149",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-248": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Current source, requirement, registry, candidate and live evidence identities must be independently bound; historical PASS results cannot transfer.",
+      "goal_sha256": "ed555377c6b99b244bca782f8173a56c41db9d122662630921385badbfd024f3",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-264": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "872d164cccbc1cbbadacdc1017cf88ac55778ceb1d72ce507afbd94a79d2c24b",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-273": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "c6ac572147915fbc4302be8bf37abf9a4269fa24aff3c6a8fd16e1477b97ddd4",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-288": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "9605152e1cb798292a5a047cd8b316c15145213159345f0d4f70fee38f29488f",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-301": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "80c5e17a0306b85e2acee2720936764513cb4fc8e72e0080eb53dab32a1b10e8",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-304": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "b53b93c54ae786731917d1567bda17af143f2ac93f4af04caf257f7d5377f15d",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-323": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "676386330309bd88f584f72503aa8641ad3c66f39a60fc2b45d9bdf07b168842",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-327": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "6f3d13bb5dd776ea0056f1795f116c5c638541d264c568a4f6b178b639a70824",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-328": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "bca000f3f3142086eb4414c76663d7610112e04789e8027ac330d541c5556444",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-331": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "b4d870a2a2a925832f788ffab6112ef6a05844acb43e2928059e374bd6191936",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-332": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "53262b9b859eb9303fd575e6333502dc3fd47a2289ee45dd21304582b95f2f1d",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-334": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "6357aae5bda43e13488a8af026f9131f3bccde58dae87c77e646a8a69cc45056",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-339": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "Installation, boot loading and removal are in scope. Derive actual paths, components and slot state for this product; historical counts and slot numbers are not current evidence.",
+      "goal_sha256": "26c34606bf06c319d379330d3b3891547d0c6aea62815afe9aabd2853420261e",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    },
+    "X2D-RG-352": {
+      "applicability": "APPLICABLE",
+      "scope_reason": "The present menu product still requires complete fresh evidence, preserved failures, independently reviewed output and fail-closed release decisions. Historical feature-specific clauses are retained verbatim and are not claimed satisfied.",
+      "goal_sha256": "8faf8d7ea5cd66f5ea15483fc4b4fb81c8f5cd19856db047be150327ca2dbd69",
+      "requirement_sha256": "19ef0e5bb2bb2f63394869553dc8e08a01693e031727e376fddffbde0a0fb220",
+      "evidence_status": "NOT_RUN",
+      "counts_as_pass": false,
+      "evidence_refs": []
+    }
+  },
+  "reviewed_pending_count": 289,
+  "expected_proposal_counts": {
+    "APPLICABLE": 91,
+    "OUT_OF_SCOPE": 198
+  },
+  "counts_as_pass": false,
+  "installable": false,
+  "package_eligible": false,
+  "implementation_reviewed": false,
+  "scope": "Original menu entry, extension page, normal return, boot loading and removal; unchanged stock camera functions still require preservation evidence.",
+  "independent_acceptance": {
+    "reviewer": "/root",
+    "basis": "Parent instruction accepted all 289 pending classifications from the three separately authored reports; retained original goals and seed rows; accepted RG066 and RG111 rationale corrections only.",
+    "first_range_independent_reviewer": "/root/scope_classification_review"
+  },
+  "source_reports": [
+    {
+      "path": "build/inherited-review-20261004/001-170.json",
+      "sha256": "047cd72eb0013a54883408f4ce639a43dc331c76eb2569baa5a87ca918d68e6f",
+      "author": "/root/menu_alignment_review",
+      "first": 1,
+      "last": 170,
+      "pending": 127,
+      "preserved": 43,
+      "independent_reviewer": "/root/scope_classification_review",
+      "accepted_by": "/root"
+    },
+    {
+      "path": "build/inherited-review-20261004/171-260.json",
+      "sha256": "5b3ed2ff8e78f139216ae7eecc8901b3da10f12cec66bb8ceda5f326cc955395",
+      "author": "/root/native_safety_finish",
+      "first": 171,
+      "last": 260,
+      "pending": 83,
+      "preserved": 7,
+      "independent_reviewer": "/root",
+      "accepted_by": "/root"
+    },
+    {
+      "path": "build/inherited-review-20261004/261-352.json",
+      "sha256": "55af8ef5d7a14a9103c653f2a25030d6e26675184f43edc413337226cc591a95",
+      "author": "/root/reboot_recovery_fix",
+      "first": 261,
+      "last": 352,
+      "pending": 79,
+      "preserved": 13,
+      "independent_reviewer": "/root",
+      "accepted_by": "/root"
+    }
+  ],
+  "rationale_corrections": {
+    "X2D-RG-066": {
+      "applicability": "OUT_OF_SCOPE",
+      "accepted_by": "/root",
+      "independent_reviewer": "/root/scope_classification_review",
+      "scope_reason": "No P16_3 rate descriptor, group-0 topology or sensor-transfer recovery is changed. The general rule that sensor/pre-RAW failures must not be described as storage failures remains applicable through RG093, with scoped capture identity under RG118; RG015 separately distinguishes USB and state-transition artifacts. Ordinary stock capture preservation remains required under RG008/RG355."
+    },
+    "X2D-RG-111": {
+      "applicability": "APPLICABLE",
+      "accepted_by": "/root",
+      "independent_reviewer": "/root/scope_classification_review",
+      "scope_reason": "Every actual native instruction run and its exception path must remain isolated from earlier runs, with no inherited callbacks, counters, register writes or stop reasons. The inspected menu harness creates a fresh Uc for each run; this classification does not assert same-instance reuse or proven hook removal. If engine reuse is introduced, exact hook ownership and finally-path removal must be reviewed and tested before relying on repeated-run evidence."
+    }
+  },
+  "limitations": [
+    "Classification is not execution, PASS, package eligibility, installation authority or current hardware evidence.",
+    "Source bindings and snapshots in the three pinned reports remain historical reviewed identities. They are retained verbatim, not silently refreshed to later source bytes.",
+    "The installer and regression generator changed after report authoring. This overlay does not independently approve those changes.",
+    "Only the original 289 PENDING_REVIEW classifications may change. The 63 previously classified seed rows, every original goal, and all later rows remain unchanged.",
+    "Future dependency, requirement or candidate changes require renewed applicability review; this record cannot provide behavioral evidence for another candidate.",
+    "Local JSON and hash validation reads neither the frozen historical project nor source paths mentioned inside reports."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "ACTUAL_TWO_PARAMETER_FAILURES_RETAINED_FORMAL_APPEND_PENDING_FROZEN_AUDIT",
+  "expected_prior_goal_count": 547,
+  "expected_prior_registry_sha256": "bd164c267b563d710047d734d735d47c8dfef358f5b3f0cdf37293527df0d656",
+  "proposed_goal": {
+    "id": "X2D-RG-553",
+    "title": "Pending replacement preparation failure cannot masquerade as tested replacement protection",
+    "origin": "The active audit failed pending_replacement[same] and[changed_status] while waiting240seconds for pending-replaced, before the subsequent15-second reader observation and replacement-protection assertions. failure-0007 SHA124eed85bf6a66f57d2a036945c8a976df7936f06c302e0ebf33fccd9bf62023 and failure-0008 SHAd1ed8fdd171eb30a1db04becba93e0de93ee35c2397cc32365b19322f6ca1b01 preserve both results. Read-only independent analysis of the same-case copy supports an unreached injection boundary, not a replacement protection PASS or FAIL.",
+    "required_behavior": "Preserve each parameter's original launch,240-second pending-replaced wait,15-second post-injection observation, hook operations and all exact-content/ownership/recovery assertions. Distinguish reaching the injection point from performing replacement and from refusing publication afterward. Do not apply TERM-only split-timing authorization or other normal receipt headroom to this failure without separate applicable authority. No changed timeout or process state is inferred from a later copied fixture. Keep the two parameters' evidence separate and diagnose the shared prerequisite only when actual records support it.",
+    "required_evidence": [
+      "Preserve both raw failure JSONs and both retained fixtures: fixture-1je66zb9 for same and fixture-oekzrxnc for changed_status. No copied same-case state is attributed to the other parameter.",
+      "Same-case retained observations: no pending-replaced/final.pending/final/original-final-retained; lifecycle log onlyloaded; GUI model stopped and lock present; TERM5641 recorded but no start:camera-gui. AtUTC05:23:36.267-.342 worker1421/birth805698001 and controller1790/birth805715702 wereS, child5641 absent. This is a post-failure sample and non-atomic copy, not the exact240-second terminal state or camera behavior.",
+      "The injection-complete reader/UNCERTAIN assertion, exact retained original receipt, replacement pending retention, absent final and GUI-running assertions were not reached. Preserve this NOT_RUN boundary instead of labelling the content-swap protection proven.",
+      "After the original audit ends and execution exclusivity is established, use only necessary original-source stage evidence to locate the prerequisite delay. An evidence-backed correction must rerun both unchanged original cases and every applicable historical gate on fresh source/candidate identities. No local timing result qualifies a camera install."
+    ]
+  },
+  "proposed_applicability": {"classification": "APPLICABLE", "evidence_status": "NOT_RUN", "counts_as_pass": false, "evidence_refs": []},
+  "camera_accesses": 0,
+  "camera_writes": 0,
+  "installable": false
+}

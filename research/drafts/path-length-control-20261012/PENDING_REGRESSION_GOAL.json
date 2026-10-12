@@ -1,0 +1,23 @@
+{
+  "status": "DEFECT_RETAINED_FORMAL_APPEND_PENDING_FROZEN_AUDIT_AND_ORIGINAL_SOURCE_REPLAY",
+  "expected_prior_goal_count": 547,
+  "expected_prior_registry_sha256": "bd164c267b563d710047d734d735d47c8dfef358f5b3f0cdf37293527df0d656",
+  "proposed_goal": {
+    "id": "X2D-RG-549",
+    "title": "Complete Windows audit uses a short owned temporary root without changing device filenames",
+    "origin": "Current full-audit failure-0003/0004 stopped while creating the historical session-context64hex.data file, before actual auxiliary staging. The existing parent was184 characters, all11 earlier formal members remained, and the failing path was270 characters. LongPathsEnabled was read as0. An independent untimed control under a different owned directory reproduced FileNotFoundError/errno2 with the same Python ordinary path API; short ordinary and270-character extended paths wrote/read identical control bytes. No original failure fixture or Windows setting was changed.",
+    "required_behavior": "Use a fixed short owned new basetemp for a successor computer audit, keeping all original tests, device session/hash filenames, staged bytes, budgets, collection, source/runtime snapshots and completion rules. Validate canonical root ownership and absence before launch and at the actual pytest consumption point; refuse rival paths and reparse targets without recursively clearing them. Bind the first factory, reject its given/cache drift and later equivalent-path factory claims before stock pytest cleanup; only genuinely unrelated factories delegate. Directory pins must use access that actually enforces Windows read/delete sharing, while retaining child creation/readback. Bind the actual reviewed pytest temporary-path consumer disk sources before/after and on activation, without claiming loaded-byte attestation. Keep old audit outputs and failed fixtures intact. Do not enable Windows long paths, truncate hashes or production filenames, skip the failed cases, or treat this local control as staging execution or camera evidence.",
+    "required_evidence": [
+      "Retain both actual full-audit failure JSONs and the independent control source/result. The control is host namespace evidence, not a successful rerun of either preparation body.",
+      "On the successor fixed runner, verify both collection/suite argv and the sole scoped --basetemp path, including fresh new-path refusal and preserving every old input/output. Verify ordinary Python creation/readback of the exact failed filename under the new test root without Windows settings changes.",
+      "Retain the late-basetemp RED/GREEN and actual factory controls through public main --suite, with the external pytest execution engine substitution explicit. Verify long-name child creation, cache reuse, given/cache drift refusal, second exact/extended-path owner refusal, unrelated delegation, parent/base rename rejection, method restoration and original body-error precedence over close failures. Actual source-bound original test cases and complete suite remain separately required.",
+      "Preserve the 4d66 draft failures: attribute-only directory pin allowed base rename (moved synthetic marker retained at build/sc-gzd9sqc3/renamed), and extended-path second factory erased disposable owned children (build/sc-sjp3uwhn/RESULT.json). Real Windows API control build/ds-afnqx396/RESULT.json shows 0x80 allowed rename whereas 0x81 refused winerror32 while child creation/readback remained possible. The af94 draft replays refused both replacement and equivalent-path cleanup without marker loss; this is not a release pass.",
+      "Rerun both original parameter cases with all exact-byte, formal-content, repeated-operation refusal and snapshot assertions, then complete every applicable offline test from the beginning with exact new runner/launcher/source bindings.",
+      "Append after the active audit and original-source timeout diagnostic finish, preserving every earlier goal/seed. Initial applicability remains APPLICABLE/NOT_RUN/counts_as_pass=false/evidence_refs=[]; no local partial result grants installation authority."
+    ]
+  },
+  "proposed_applicability": {"classification": "APPLICABLE", "evidence_status": "NOT_RUN", "counts_as_pass": false, "evidence_refs": []},
+  "camera_accesses": 0,
+  "camera_writes": 0,
+  "installable": false
+}

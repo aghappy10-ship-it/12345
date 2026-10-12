@@ -1,0 +1,80 @@
+*** Begin Patch
+*** Update File: tests/test_host_audit_invocation.py
+@@
+-RUNNER = ROOT / "build/peer-route-review-20261011-host-fixed/run_audit.py"
++RUNNERS = ("peer-route-review-20261011-host-fixed", "peer-route-review-20261012-short-root")
+@@
+-def load_current():
+-    raw = RUNNER.read_bytes()
++def load_current(folder):
++    runner_path = ROOT / "build" / folder / "run_audit.py"
++    raw = runner_path.read_bytes()
+     module = types.ModuleType("fixed_audit_invocation_control")
+-    module.__file__ = str(RUNNER)
+-    exec(compile(raw, str(RUNNER), "exec"), module.__dict__)
++    module.__file__ = str(runner_path)
++    exec(compile(raw, str(runner_path), "exec"), module.__dict__)
+     return module, hashlib.sha256(raw).hexdigest()
++
++
++@pytest.fixture(params=RUNNERS, ids=("retained-host-fixed", "short-root"))
++def audit_runner(tmp_path, request):
++    runner, source_hash = load_current(request.param)
++    runner.HERE = tmp_path
++    if hasattr(runner, "SUITE_PARENT"):
++        runner.SUITE_PARENT = tmp_path / "s"
++        runner.SUITE_BASETEMP = runner.SUITE_PARENT / "t"
++    return runner, source_hash
++
++
++def expected_basetemp(runner, tmp_path):
++    return runner.SUITE_BASETEMP if hasattr(runner, "SUITE_BASETEMP") else tmp_path / "suite-basetemp"
+@@
+ def test_actual_main_routes_only_suite_to_new_project_local_basetemp(
+-        tmp_path, monkeypatch, record_property, action):
++        tmp_path, monkeypatch, record_property, action, audit_runner):
+     assert sys.dont_write_bytecode and not sys.flags.optimize
+-    runner, source_hash = load_current()
+-    runner.HERE = tmp_path
++    runner, source_hash = audit_runner
++    basetemp = expected_basetemp(runner, tmp_path)
+@@
+-    expected = ["--basetemp=" + str(tmp_path / "suite-basetemp")] if action == "--suite" else []
++    expected = ["--basetemp=" + str(basetemp)] if action == "--suite" else []
+@@
+-            "--basetemp=" + str(tmp_path / "suite-basetemp"),
++            "--basetemp=" + str(basetemp),
+@@
+-    assert len(plugins) == 1 and not (tmp_path / "suite-basetemp").exists()
++    assert len(plugins) == 1 and not basetemp.exists()
+@@
+-    assert hashlib.sha256(RUNNER.read_bytes()).hexdigest() == source_hash
++    assert hashlib.sha256(Path(runner.__file__).read_bytes()).hexdigest() == source_hash
+@@
+ def test_actual_suite_refuses_preexisting_basetemp_before_preflight_or_pytest(
+-        tmp_path, monkeypatch):
+-    runner, source_hash = load_current()
+-    runner.HERE = tmp_path
+-    existing = tmp_path / "suite-basetemp"
+-    existing.mkdir()
++        tmp_path, monkeypatch, audit_runner):
++    runner, source_hash = audit_runner
++    existing = expected_basetemp(runner, tmp_path)
++    existing.mkdir(parents=True)
+@@
+-    assert hashlib.sha256(RUNNER.read_bytes()).hexdigest() == source_hash
++    assert hashlib.sha256(Path(runner.__file__).read_bytes()).hexdigest() == source_hash
+@@
+ def test_actual_suite_preflight_failure_never_runs_pytest_or_creates_basetemp(
+-        tmp_path, monkeypatch):
+-    runner, source_hash = load_current()
+-    runner.HERE = tmp_path
++        tmp_path, monkeypatch, audit_runner):
++    runner, source_hash = audit_runner
++    basetemp = expected_basetemp(runner, tmp_path)
+@@
+-    assert calls == [] and not (tmp_path / "suite-basetemp").exists()
+-    assert hashlib.sha256(RUNNER.read_bytes()).hexdigest() == source_hash
++    assert calls == [] and not basetemp.exists()
++    assert hashlib.sha256(Path(runner.__file__).read_bytes()).hexdigest() == source_hash
+*** End Patch

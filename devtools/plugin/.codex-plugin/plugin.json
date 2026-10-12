@@ -1,0 +1,16 @@
+{
+  "name": "x2dii-dev-studio",
+  "version": "0.1.0",
+  "description": "Local X2D II workbench, read-only device discovery and local-model development proposals. No camera writes.",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "X2D II 开发工作台",
+    "shortDescription": "相机识别、菜单预览和本地模型协作",
+    "longDescription": "本地开发工具。显示实际设备识别与桌面 Qt 预览，可让本地模型后台生成待 Codex 审查的建议。不绑定审查模型版本，不提供刷机、验签绕过或自动源码应用。",
+    "developerName": "Local X2D II Project",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "brandColor": "#236b59",
+    "defaultPrompt": ["打开 X2D II 开发工作台并检测相机", "让本地模型检查菜单代码，交给 Codex 审查"]
+  }
+}

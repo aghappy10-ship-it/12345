@@ -1,0 +1,22 @@
+{
+  "status": "ACTUAL_FAILURE_RETAINED_FORMAL_APPEND_PENDING_FROZEN_AUDIT_AND_ORIGINAL_SOURCE_REPLAY",
+  "expected_prior_goal_count": 547,
+  "expected_prior_registry_sha256": "bd164c267b563d710047d734d735d47c8dfef358f5b3f0cdf37293527df0d656",
+  "proposed_goal": {
+    "id": "X2D-RG-550",
+    "title": "Normal sender receipt timeout retains the actual pending-to-final observation boundary",
+    "origin": "The active full audit failed test_fixed_sender_verifies_final_hash_and_does_not_invent_ui_success after its approved360-second normal receipt loop, total367.3796seconds. This was not a read20 TimeoutExpired. failure-0005.json SHA7b9beceff30c36c3c3b63b34c458d1bd1ff402afbd9ec59328de1509e4b0a0b7 preserves the failure and fixture-ojn44xoe. The later copied snapshot includes final session dbc1a5db...d8b7:0, restored modeled GUI and normal gate completion; none proves the original loop read a final before its deadline.",
+    "required_behavior": "Keep launch8/read20/normal receipt360, original test body/assertions, source/program identities, sender parsing and cleanup unchanged. Preserve pending observations and actual final separately. Parent action intervals and original returned text must be recorded before sender parsing, with text=True clearly disclosed; re-encoded text is not new native raw pipe capture. A targeted existing OS-boundary hook may log the exact original final.pending-to-final mv once with builtin timestamps/PIDs/status, delegating the original operation once and preserving stdout/stderr/status. Do not add repeated existence/stat/hash queries to obtain an event timestamp. Auxiliary diagnostics cannot replace original assertions/errors; successful assertions with failed evidence retention still fail the diagnostic. Do not run additional timing tests concurrently with the active full audit or enlarge its budget.",
+    "required_evidence": [
+      "Retain original failure and copied fixture, with frozen230/655e source binding. Actor sampler observed worker1696 birth803676787 stateR at04:51:58.002-.048UTC, controller2414 and gateGUI8389 absent. This is one actual post-failure sample, not all-helper quiescence or a current camera result.",
+      "The copied final SHA56e8607aefa8eb6faae67523efb8d4423396787e3ba7ae16c99946fefd70f9e3 verifies copied content only. Operations logs before native mv, pending mtime retained across rename, and non-atomic copytree cannot establish publication before360seconds or erase the failure.",
+      "Use the independently reviewed minimal original-node diagnostic after natural full-audit finalization. Distinguish the last returned q PENDING from final commit BEGIN/END. If intervals overlap, only then log the original q branch predicate once rather than perform another existence check. State unclosed causality explicitly.",
+      "An actual final0 remains EXITED_NOT_FEATURE_VALIDATED, not menu/UI/capture/save/boot qualification. After an evidence-backed correction rerun the original node and every applicable historical gate from the beginning on the new exact source and candidate; do not reuse an old independent PASS."
+    ]
+  },
+  "proposed_applicability": {"classification": "APPLICABLE", "evidence_status": "NOT_RUN", "counts_as_pass": false, "evidence_refs": []},
+  "formal_append_condition": "Only after current audit naturally finalizes and both original-source diagnostics are completed or explicitly unresolved; preserve first547 goals/seeds and append548/549/550 without dropping earlier defects",
+  "camera_accesses": 0,
+  "camera_writes": 0,
+  "installable": false
+}
